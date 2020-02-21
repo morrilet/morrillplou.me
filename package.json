@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/morrilet/morrillplou.me/issues"
   },
-  "homepage": "https://github.com/morrilet/morrillplou.me#readme"
+  "homepage": "https://github.com/morrilet/morrillplou.me#readme",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
 }
