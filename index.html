@@ -1,0 +1,26 @@
+---
+title: Ethan Morrill-Ploum
+names: 
+    - John Smith
+    - My Mom
+    - Your Mom
+    - Bootyholes
+---
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Test!</h1>
+        <p>This is a test of my site.</p>
+        <p>Here's some people I want to thank:</p>
+        <ul>
+            {%- for name in names %}
+                <li>{{ name }} ({{ name | characterCount }})</li>
+            {%- endfor %}
+        </ul>
+    </body>
+</html>

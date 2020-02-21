@@ -1,0 +1,20 @@
+{
+  "name": "morrillplou.me",
+  "version": "1.0.0",
+  "description": "A static personal page with a blog. Built with 11ty and Sass. Hosted on Netlify.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morrilet/morrillplou.me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morrilet/morrillplou.me/issues"
+  },
+  "homepage": "https://github.com/morrilet/morrillplou.me#readme"
+}
