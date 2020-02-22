@@ -4,7 +4,13 @@
   "description": "A static personal page with a blog. Built with 11ty and Sass. Hosted on Netlify.",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --style=compressed styles/:_site/styles/",
+    "watch:sass": "npm run sass -- --watch",
+    "eleventy": "eleventy --formats=html,md",
+    "watch:eleventy": "eleventy --serve",
+    "start": "npm-run-all sass --parallel watch:*",
+    "build": "npm run sass && eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,6 +25,8 @@
   "homepage": "https://github.com/morrilet/morrillplou.me#readme",
   "private": true,
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.25.0"
   }
 }
