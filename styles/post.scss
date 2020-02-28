@@ -1,0 +1,66 @@
+@use 'main';
+
+$header_height: 4em;
+$avatar_size: 4em;
+
+header {
+    color: main.$light-color;
+    background-color: main.$dark-color;
+    position: relative;
+    padding: 12px 40px;
+    height: $header_height;
+
+    #avatar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        img {
+            width: $avatar_size;
+            height: $avatar_size;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 1.1rem;
+        text-align: right;
+        line-height: $header_height;
+
+        li {
+            display: inline-block;
+            padding: 0px 18px;
+            text-align: right;
+
+            // For vertical centering w/in the UL.
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+#title-wrapper {
+    height: 300px;
+    position: relative;
+    background-color: main.$dark-color;
+    background-size: cover;
+    background-position: center;
+}
+
+#title {
+    padding: 12px;
+    margin-right: 80px;
+    max-width: 80%;
+    min-width: 400px;
+    border-bottom-right-radius: 1000px;
+    background-color: main.$dark-accent-color;
+    background-image: linear-gradient(120deg, main.$dark-accent-color 60%, main.$light-accent-color);
+    box-shadow: 1px 0px 10px main.$dark-color;
+}

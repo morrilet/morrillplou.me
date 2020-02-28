@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --style=compressed styles/:_site/styles/",
     "watch:sass": "npm run sass -- --watch",
-    "eleventy": "eleventy --formats=html,md",
+    "eleventy": "eleventy --formats=html,md,png,jpg,jpeg",
     "watch:eleventy": "eleventy --serve",
     "start": "npm-run-all sass --parallel watch:*",
     "build": "npm run sass && eleventy"
