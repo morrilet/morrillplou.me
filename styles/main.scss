@@ -5,6 +5,8 @@ $dark-color: #45414C; // Chestnut Rose -- Text in light, background in dark.
 $dark-accent-color: #CC5658; // Ship Gray -- Draws attention. Sparingly used.
 $brand-color: #92B5A6; // Summer Green -- Used for icons, branding. Liberally applied.
 
+$accent-gradient: linear-gradient(120deg, $dark-accent-color 60%, $light-accent-color);
+
 $h-tags: "h1, h2, h3, h4, h5, h6";
 $a-tags: "a, a:active, a:hover, a:visited";
 $a-tags-hover: "a:active", "a:hover";
@@ -20,7 +22,7 @@ body {
     background-color: $light-color;
 }
 
-#{$h-tags} p {
+#{$h-tags}, p {
     color: $dark-color;
 
     &.inverted {
@@ -29,18 +31,21 @@ body {
 }
 
 #{$a-tags} {
-    color: $brand-color;
+    color: $dark-accent-color;
     font-weight: bold;
     text-decoration: none;
+    padding: 2px;
 }
 
 #{$a-tags-hover} {
-    color: $brand-color;
+    color: $light-color;
     background-color: $dark-color;
+    background-image: $accent-gradient;
+    border-radius: 3px;
 
-    &.inverted {
-        background-color: $light-color;
-    }
+    // &.inverted {
+    //     color: $light-color;
+    // }
 }
 
 button {
@@ -53,7 +58,7 @@ button {
     text-transform: capitalize;
 
     transition: 0.25s ease-out;
-    background-image: linear-gradient(120deg, $dark-accent-color 60%, $light-accent-color);
+    background-image: $accent-gradient;
     background-position: left;
     background-size: 200%;
 }

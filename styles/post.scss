@@ -1,16 +1,22 @@
 @use 'main';
 
-$header_height: 4em;
+$header_desaturation: 80%;
+$header_height: 5.5em;
 $avatar_size: 4em;
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header_height;
     color: main.$light-color;
     background-color: main.$dark-color;
-    position: relative;
     padding: 12px 40px;
-    height: $header_height;
+    z-index: 100;
+    box-sizing: border-box;
 
-    #avatar {
+    #title-avatar {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -24,7 +30,7 @@ header {
         }
     }
 
-    ul {
+    #title-menu {
         padding: 0;
         margin: 0;
         width: 100%;
@@ -44,23 +50,74 @@ header {
             transform: translateY(-50%);
         }
     }
+
+    #title-progress-bar {
+        position: absolute;
+        height: 0.35em;
+        bottom: 0;
+        left: 0;
+        background-image: main.$accent-gradient;
+    }
 }
 
 #title-wrapper {
     height: 300px;
     position: relative;
+    margin-top: $header-height;
     background-color: main.$dark-color;
-    background-size: cover;
-    background-position: center;
+
+    #title-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 100px;
+        background-size: cover;
+        background-position: center;
+
+        -webkit-filter: grayscale($header_desaturation);
+        -moz-filter:    grayscale($header_desaturation);
+        -ms-filter:     grayscale($header_desaturation);
+        -o-filter:      grayscale($header_desaturation);
+        filter:         grayscale($header_desaturation);
+    }
+
+    #title-header {
+        position: relative;
+        padding: 12px;
+        margin-right: 80px;
+        max-width: 80%;
+        min-width: 400px;
+        border-bottom-right-radius: 1000px;
+        background-color: main.$dark-accent-color;
+        background-image: main.$accent-gradient;
+        box-shadow: 1px 0px 10px main.$dark-color;
+    }
 }
 
-#title {
-    padding: 12px;
-    margin-right: 80px;
-    max-width: 80%;
-    min-width: 400px;
-    border-bottom-right-radius: 1000px;
-    background-color: main.$dark-accent-color;
-    background-image: linear-gradient(120deg, main.$dark-accent-color 60%, main.$light-accent-color);
-    box-shadow: 1px 0px 10px main.$dark-color;
+#content {
+    width: 100%;
+    padding: 24px 10%;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    
+    * {
+        width: 100%;
+    }
+
+    h1:before {
+        content: '#';
+        padding-right: 0.75em;
+        color: main.$dark-accent-color;
+    }
+
+    pre {
+        box-sizing: border-box;
+    }
+
+    img {
+        position: relative;
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
 }
