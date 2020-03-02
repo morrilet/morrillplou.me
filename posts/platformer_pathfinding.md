@@ -1,5 +1,4 @@
 ---
-tags: ['post']
 title: 'Platformer Pathfinding with Pre-Recorded Inputs'
 image: '/images/Bunkers_NavMeshTesting.png'
 ---

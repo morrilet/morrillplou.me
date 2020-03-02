@@ -1,0 +1,15 @@
+// Theme colors
+$light-color: #F9F8F8;  // Alabaster -- Background in light, text in dark.
+$light-accent-color: #E09B5E; // Di Serria -- Draws attention. Sparingly used.
+$dark-color: #45414C; // Chestnut Rose -- Text in light, background in dark.
+$dark-accent-color: #CC5658; // Ship Gray -- Draws attention. Sparingly used.
+$brand-color: #92B5A6; // Summer Green -- Used for icons, branding. Liberally applied.
+
+$accent-gradient: linear-gradient(120deg, $dark-accent-color 60%, $light-accent-color);
+
+$body-typestack:  Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+$header-typestack: 'Cambria', 'Hoefler Text', 'Utopia', 'Liberation Serif', 'Nimbus Roman No9 L Regular', 'Times', 'Times New Roman', 'serif';
+
+$h-tags: "h1, h2, h3, h4, h5, h6";
+$a-tags: "a, a:active, a:hover, a:visited";
+$a-tags-hover: "a:active", "a:hover";

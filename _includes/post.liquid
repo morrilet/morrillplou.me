@@ -7,27 +7,29 @@
         <link rel="stylesheet" type="text/css" href="/styles/prism/themes/okaidia.css"/>
     </head>
     <body>
-        <header>
-            <div id="title-avatar">
-                <img src="https://via.placeholder.com/64"/>
-            </div>
-            <ul id="title-menu">
-                <li><a href="/" class="inverted">Home</a></li>
-                <li><a href="/" class="inverted">Portfolio</a></li>
-                <li><a href="/" class="inverted">About</a></li>
-                <li><button class="inverted" href="/">Contact</button></li>
-            </ul>
-            <div id='title-progress-bar'></div>
-        </header>
+        {% include header %}
+
         <div id="title-wrapper">
             <div id="title-image" style="background-image:url('{{ image }}')"></div>
             <div id="title-header">
-                <h1>{{ title }}</h1>
+                <h1 id="title-header-text">{{ title }}</h1>
+                <p id="title-header-date-posted">
+                    <i class="fas fa-upload"></i>
+                    {{ page.date | toUTCString }}
+                </p>
+                {% if date_modified %}
+                    <p id="title-header-date-updated">
+                        <i class="fas fa-pencil-alt"></i>
+                        {{ date_modified | toUTCString }}
+                    </p>
+                {% endif %}
             </div>
         </div>
         <div id='content'>
             {{ content }}
         </div>
     </body>
+
     <script type="text/javascript" src="/js/progress_bar.js"></script>
+    <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>
 </html>

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --style=compressed styles/:_site/styles/",
     "watch:sass": "npm run sass -- --watch",
-    "eleventy": "eleventy --formats=html,js,md,png,jpg,jpeg",
+    "eleventy": "eleventy --formats=html,js,md,png,jpg,jpeg,svg",
     "watch:eleventy": "eleventy --serve",
     "start": "npm-run-all sass --parallel watch:*",
     "build": "npm run sass && eleventy"
@@ -29,5 +29,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.25.0"
-  }
+  },
+  "dependencies": {}
 }
