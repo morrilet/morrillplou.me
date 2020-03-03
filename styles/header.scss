@@ -59,3 +59,8 @@ header {
         background-image: global.$accent-gradient;
     }
 }
+
+#header-block {
+    display: block;
+    height: $header_height;
+}
