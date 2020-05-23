@@ -1,11 +1,73 @@
 ---
 title: Ethan Morrill-Ploum
+blog_previews: {
+    title: 'Blog Posts',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
+                  ullamcorper diam, eu condimentum odio. Vestibulum in magna id ipsum 
+                  ullamcorper mattis a ac mauris.',
+    content: [
+        {
+            title: 'Blog post title 1',
+            body: 'Blog post body 1',
+            url: '/',
+            image: ''
+        },
+        {
+            title: 'Blog post title 2',
+            body: 'Blog post body 2',
+            url: '/',
+            image: ''
+        }
+    ]
+}
+game_previews: {
+    title: 'Games',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
+                  ullamcorper diam, eu condimentum odio. Vestibulum in magna id ipsum 
+                  ullamcorper mattis a ac mauris.',
+    content: [
+        {
+            title: 'Game title 1',
+            body: 'Game body 1',
+            url: '/',
+            image: ''
+        },
+        {
+            title: 'Game title 2',
+            body: 'Game body 2',
+            url: '/',
+            image: ''
+        }
+    ]
+}
+site_previews: {
+    title: 'Sites',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
+                  ullamcorper diam, eu condimentum odio. Vestibulum in magna id ipsum 
+                  ullamcorper mattis a ac mauris.',
+    content: [
+        {
+            title: 'Site title 1',
+            body: 'Site body 1',
+            url: '/',
+            image: ''
+        },
+        {
+            title: 'Site title 2',
+            body: 'Site body 2',
+            url: '/',
+            image: ''
+        }
+    ]
+}
 ---
 
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        
         <title>{{ title }}</title>
         <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
     </head>
@@ -24,13 +86,39 @@ title: Ethan Morrill-Ploum
             </div>
         </div>
 
-        <div>
-            <h3>Posts:</h3>
-            <ul>
+        <div class="nav-section">
+            <h1>Posts</h1>
+            <!-- <ul> -->
                 {%- for post in collections.post %}
-                    <li><a href="{{ post.url }}">{{post.data.title}}</a></li>
+                    <!-- <li><a href="{{ post.url }}">{{post.data.title}}</a></li> -->
+                    {% include post-card with {
+                            title: post.data.title
+                            title_url: post.url
+                        }
+                    %}
                 {%- endfor %}
-            </ul>
+            <!-- </ul> -->
         </div>
+
+        <!-- Blog Previews -->
+        {% include nav-section with {
+            title: blog_previews.title
+            description: blog_previews.description
+            content: blog_previews.content
+        } %}
+
+        <!-- Game Previews -->
+        {% include nav-section with {
+            title: game_previews.title
+            description: game_previews.description
+            content: game_previews.content
+        } %}
+        
+        <!-- Site Previews -->
+        {% include nav-section with {
+            title: site_previews.title
+            description: site_previews.description
+            content: site_previews.content
+        } %}
     </body>
 </html>

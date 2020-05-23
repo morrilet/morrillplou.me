@@ -28,3 +28,20 @@
         }
     }
 }
+
+.nav-section {
+
+    // A whole bunch of this is pulled right from post.scss - combine this 
+    // in base-page once we're done testing it out.
+    
+    width: 100%;
+    padding: 24px 10%;
+    box-sizing: border-box;
+    font-size: 1.25em;
+
+    h1:before {
+        content: '#';
+        padding-right: 0.75em;
+        color: global.$dark-accent-color;
+    }
+}

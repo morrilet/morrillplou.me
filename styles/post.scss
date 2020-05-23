@@ -45,10 +45,24 @@ $title_image_desaturation: 80%;
 
 #content {
     width: 100%;
-    padding: 24px 10%;
     box-sizing: border-box;
     font-size: 1.25em;
     
+    // Mobile (size < mobile)
+    @media only screen and (max-width: global.$breakpoint-mobile) {
+        padding: 24px 5%;
+    }
+
+    // Tablets (mobile < size < tablet)
+    @media only screen and (min-width: global.$breakpoint-mobile) and (max-width: global.$breakpoint-tablet) {
+        padding: 24px 10%;
+    }
+
+    // Desktop (tablet < size)
+    @media only screen and (min-width: global.$breakpoint-tablet) {
+        padding: 24px 30%;
+    }
+
     * {
         width: 100%;
     }

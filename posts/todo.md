@@ -21,6 +21,8 @@ image: '/images/post_it_notes.jpg'
 * Image captions
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
 * Ignore directory for drafts
+* Product pages (games, sites, etc.)
+* Overview sections
 
 # Things to learn
 
