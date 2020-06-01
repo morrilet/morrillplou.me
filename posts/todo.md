@@ -23,6 +23,7 @@ image: '/images/post_it_notes.jpg'
 * Ignore directory for drafts
 * Product pages (games, sites, etc.)
 * Overview sections
+* Download fonts and link them using @font-face so they actually render properly on the site.
 
 # Things to learn
 

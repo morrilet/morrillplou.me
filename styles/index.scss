@@ -6,24 +6,93 @@
 
     width: 100%;
     background-color: global.$dark-color;
+    box-shadow: global.$vignette-shadow;
 
     #title-header {
 
         #title-header-text {
-            padding: 5em 0 1em 1em;
+            padding: 5em 0;
             white-space: nowrap;
+            position: relative;
 
-            h1 {
-                padding: 0;
-                margin: 0;
-
-                &.dark-accent-color {
-                    color: global.$dark-accent-color;
+            #title-text-wrapper {
+                position: relative;
+                
+                .title-text {
+                    width: 60%;
+                    margin: 0 20%;
+                    text-align: center;
                 }
 
-                &.indent {
-                    text-indent: 1em;
+                .title-subtext {
+                    font-weight: 300;
+
                 }
+
+                .social-link-container {
+                    position: relative;
+                    vertical-align: middle;
+                    display: inline-block;
+                    width: 0.8125em;
+                    height: 0.8125em;
+                    margin: 0 0.4em;
+                    transform: translateY(-25%);
+
+                    a {
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                        padding: 0;
+                        
+                        &:hover {
+                            cursor: pointer;
+                        }
+    
+                        img {
+                            position: absolute;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                h1 {
+                    padding: 0;
+                    margin: 0;
+
+                    &.dark-accent-color {
+                        color: global.$dark-accent-color;
+                    }
+
+                    &.indent {
+                        text-indent: 1em;
+                    }
+                }
+            }
+
+            #title-text-wrapper::before, #title-text-wrapper::after {
+                position: absolute;
+                width: 20%;
+                top: 50%;
+                transform: translateY(-60%);
+
+                font-size: 8em;
+                font-weight: 300;
+                font-family: global.$header-typestack;
+                color: global.$dark-accent-color;
+            }
+
+            #title-text-wrapper::before {
+                content: '{';
+                text-align: right;
+                left: 0;
+            }
+
+            #title-text-wrapper::after {
+                content: '}';
+                text-align: left;
+                right: 0;
             }
         }
     }

@@ -1,5 +1,22 @@
 ---
 title: Ethan Morrill-Ploum
+social_links: [
+    {
+        icon: '/icons/Twitter_Social_Icon_Rounded_Square_White.svg',
+        link: 'https://twitter.com/morrilet',
+        alt: 'Twitter'   
+    },
+    {
+        icon: '/icons/GitHub-Mark-Light.svg',
+        link: 'https://github.com/morrilet',
+        alt: 'Github'   
+    },
+    {
+        icon: '/icons/fa-envelope-square.svg',
+        link: 'mailto:ethanmorrillploum@gmail.com',
+        alt: 'Email' 
+    }
+]
 blog_previews: {
     title: 'Blog Posts',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
@@ -77,48 +94,58 @@ site_previews: {
         <div id="title-wrapper">
             <div id="title-header">
                 <div id="title-header-text">
-                    <h1 class="dark-accent-color">{</h1>
-                    <h1 class="inverted indent">"name": "Ethan Morrill-Ploum",</h1>
-                    <h1 class="inverted indent">"occupation": "Software Developer",</h1>
-                    <h1 class="inverted indent">"interests": ["Web", "Games", "Food"]</h1>
-                    <h1 class="dark-accent-color">}</h1>
+                    <div id="title-text-wrapper">
+                        <h1 class="title-text inverted">Ethan Morrill-Ploum</h1>
+                        <h1 class="title-subtext title-text inverted">Software Developer</h1>
+                        <h1 class="title-subtext title-text inverted">[
+                            {% for obj in social_links %}
+                                <div class="social-link-container">
+                                    <a class="no-decoration" href="{{ obj.link }}" target="blank">
+                                        <img src="{{ obj.icon }}" alt="{{ obj.alt }}" />
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        ]</h1>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="nav-section">
-            <h1>Posts</h1>
-            <!-- <ul> -->
-                {%- for post in collections.post %}
-                    <!-- <li><a href="{{ post.url }}">{{post.data.title}}</a></li> -->
-                    {% include post-card with {
-                            title: post.data.title
-                            title_url: post.url
-                        }
-                    %}
-                {%- endfor %}
-            <!-- </ul> -->
+        <div class="responsive-gutters">
+            <div class="nav-section">
+                <h1>Posts</h1>
+                <!-- <ul> -->
+                    {%- for post in collections.post %}
+                        <!-- <li><a href="{{ post.url }}">{{post.data.title}}</a></li> -->
+                        {% include post-card with {
+                                title: post.data.title
+                                title_url: post.url
+                            }
+                        %}
+                    {%- endfor %}
+                <!-- </ul> -->
+            </div>
+
+            <!-- Blog Previews -->
+            {% include nav-section with {
+                title: blog_previews.title
+                description: blog_previews.description
+                content: blog_previews.content
+            } %}
+
+            <!-- Game Previews -->
+            {% include nav-section with {
+                title: game_previews.title
+                description: game_previews.description
+                content: game_previews.content
+            } %}
+            
+            <!-- Site Previews -->
+            {% include nav-section with {
+                title: site_previews.title
+                description: site_previews.description
+                content: site_previews.content
+            } %}     
         </div>
-
-        <!-- Blog Previews -->
-        {% include nav-section with {
-            title: blog_previews.title
-            description: blog_previews.description
-            content: blog_previews.content
-        } %}
-
-        <!-- Game Previews -->
-        {% include nav-section with {
-            title: game_previews.title
-            description: game_previews.description
-            content: game_previews.content
-        } %}
-        
-        <!-- Site Previews -->
-        {% include nav-section with {
-            title: site_previews.title
-            description: site_previews.description
-            content: site_previews.content
-        } %}
     </body>
 </html>
