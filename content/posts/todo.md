@@ -16,7 +16,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Progress bar under blog header~~
 * ~~Make blog header sticky~~
 * ~~Remove gradient from blog post title.~~
-* Media queries for gutter size
+* ~~Media queries for gutter size~~
 * Blog post preview text from the home page
 * Image captions
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.

@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/icons/Twitter_Social_Icon_Rounded_Square_White.svg",
+        "link": "https://twitter.com/morrilet",
+        "alt": "Twitter"
+    },
+    {
+        "icon": "/icons/GitHub-Mark-Light.svg",
+        "link": "https://github.com/morrilet",
+        "alt": "Github"
+    },
+    {
+        "icon": "/icons/fa-envelope-square.svg",
+        "link": "mailto:ethanmorrillploum@gmail.com",
+        "alt": "Email"
+    }
+]

@@ -1,41 +1,10 @@
 ---
 title: Ethan Morrill-Ploum
-social_links: [
-    {
-        icon: '/icons/Twitter_Social_Icon_Rounded_Square_White.svg',
-        link: 'https://twitter.com/morrilet',
-        alt: 'Twitter'   
-    },
-    {
-        icon: '/icons/GitHub-Mark-Light.svg',
-        link: 'https://github.com/morrilet',
-        alt: 'Github'   
-    },
-    {
-        icon: '/icons/fa-envelope-square.svg',
-        link: 'mailto:ethanmorrillploum@gmail.com',
-        alt: 'Email' 
-    }
-]
-blog_previews: {
-    title: 'Blog Posts',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
-                  ullamcorper diam, eu condimentum odio. Vestibulum in magna id ipsum 
-                  ullamcorper mattis a ac mauris.',
-    content: [
-        {
-            title: 'Blog post title 1',
-            body: 'Blog post body 1',
-            url: '/',
-            image: ''
-        },
-        {
-            title: 'Blog post title 2',
-            body: 'Blog post body 2',
-            url: '/',
-            image: ''
-        }
-    ]
+about: {
+    title: 'About Me',
+    description: "I am a Canadian / American programmer with an interest in web development and games. I build <a>websites</a> and <a>games</a> interchangably, and primarily work
+    in Python, C#, Javascript, and HTML / CSS. I've also dabbled in low-level hardware and the more practical side of scripting. In my free time I like to cook, code, 
+    and play 'Magic the Gathering'. I'm always on the lookout for a cool project. Send me a message on <a href='https://twitter.com/morrilet' target='blank'>Twitter</a> to chat about code!",
 }
 game_previews: {
     title: 'Games',
@@ -79,73 +48,55 @@ site_previews: {
 }
 ---
 
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-        
-        <title>{{ title }}</title>
-        <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
-    </head>
-    <body>
-        {% include header %}
+{% include templates/base-page %}
 
-        <div id="title-wrapper">
-            <div id="title-header">
-                <div id="title-header-text">
-                    <div id="title-text-wrapper">
-                        <h1 class="title-text inverted">Ethan Morrill-Ploum</h1>
-                        <h1 class="title-subtext title-text inverted">Software Developer</h1>
-                        <h1 class="title-subtext title-text inverted">[
-                            {% for obj in social_links %}
-                                <div class="social-link-container">
-                                    <a class="no-decoration" href="{{ obj.link }}" target="blank">
-                                        <img src="{{ obj.icon }}" alt="{{ obj.alt }}" />
-                                    </a>
-                                </div>
-                            {% endfor %}
-                        ]</h1>
-                    </div>
+{% block content %}
+    <div id="title-wrapper">
+        <div id="title-header">
+            <div id="title-header-text">
+                <div id="title-text-wrapper">
+                    <h1 class="title-text inverted">Ethan Morrill-Ploum</h1>
+                    <h1 class="title-subtext title-text inverted">Software Developer</h1>
+                    <h1 class="title-subtext title-text inverted">[
+                        {% for obj in social_links %}
+                            <div class="social-link-container">
+                                <a class="no-decoration" href="{{ obj.link }}" target="blank">
+                                    <img src="{{ obj.icon }}" alt="{{ obj.alt }}" />
+                                </a>
+                            </div>
+                        {% endfor %}
+                    ]</h1>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="responsive-gutters">
-            <div class="nav-section">
-                <h1>Posts</h1>
-                <!-- <ul> -->
-                    {%- for post in collections.post %}
-                        <!-- <li><a href="{{ post.url }}">{{post.data.title}}</a></li> -->
-                        {% include post-card with {
-                                title: post.data.title
-                                title_url: post.url
-                            }
-                        %}
-                    {%- endfor %}
-                <!-- </ul> -->
-            </div>
+    <div class="responsive-gutters">
+        <!-- About Me -->
+        {% include components/nav-section with {
+            title: about.title
+            description: about.description
+        } %}
 
-            <!-- Blog Previews -->
-            {% include nav-section with {
-                title: blog_previews.title
-                description: blog_previews.description
-                content: blog_previews.content
-            } %}
+        <!-- Blog Previews -->
+        {% assign latest_posts = collections.posts | reverse | slice: 0, 3 %}
+        {% include components/nav-section with {
+            title: blog_nav_section.title
+            description: blog_nav_section.description
+            content: latest_posts
+            more: blog_nav_section.more
+        } %}
 
-            <!-- Game Previews -->
-            {% include nav-section with {
-                title: game_previews.title
-                description: game_previews.description
-                content: game_previews.content
-            } %}
-            
-            <!-- Site Previews -->
-            {% include nav-section with {
-                title: site_previews.title
-                description: site_previews.description
-                content: site_previews.content
-            } %}     
-        </div>
-    </body>
-</html>
+        <!-- Game Previews -->
+        {% include components/nav-section with {
+            title: game_previews.title
+            description: game_previews.description
+        } %}
+        
+        <!-- Site Previews -->
+        {% include components/nav-section with {
+            title: site_previews.title
+            description: site_previews.description
+        } %}     
+    </div>
+{% endblock %}

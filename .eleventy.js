@@ -1,4 +1,5 @@
 const syntaxHighlighter = require('@11ty/eleventy-plugin-syntaxhighlight');
+const markdownIt = require('markdown-it');
 const months = [
     'January',
     'February',
@@ -14,11 +15,35 @@ const months = [
     'December'
 ]
 
+
+/**
+ * Attempts to get an excerpt from a post object. The excerpt is the content between before the first 
+ * instance of '<!-- more -->' or the excerpt listed in front-matter, based on availability.
+ * 
+ * @param {object} post 
+ */
+const getExcerpt = (post) => {
+    const md = new markdownIt({ html: true })
+    if (post.data.excerpt) {
+        return md.render(post.data.excerpt);
+    } 
+    else if (post.data.page.excerpt) {
+        return md.render(post.data.page.excerpt);
+    }
+    return null
+}
+
+
 module.exports = (function(eleventyConfig) {
 
     // Config
     eleventyConfig.addPassthroughCopy('_includes/styles');
     eleventyConfig.addPassthroughCopy('_includes/images');
+    eleventyConfig.addShortcode('excerpt', (post) => getExcerpt(post))
+    eleventyConfig.setFrontMatterParsingOptions({
+        excerpt: true,
+        excerpt_separator: "<!-- more -->"
+    })
 
     // Plugins
     eleventyConfig.addPlugin(syntaxHighlighter);

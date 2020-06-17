@@ -1,7 +1,7 @@
 ---
-tags: ['post']
 title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 image: '/images/Diorama.png'
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra est mattis mi interdum, non accumsan dolor tempor. Etiam est enim, dictum at scelerisque eu, sodales in velit. Cras vel lacus felis. Praesent sodales aliquet ligula ut euismod. Nam ultricies, quam non cursus luctus, justo [dolor tincidunt sem](#), vel tincidunt augue metus in ante. Suspendisse tempor sollicitudin nibh, eu fermentum neque commodo convallis. Sed laoreet hendrerit placerat. Quisque ac semper velit. Donec scelerisque porta nibh, nec suscipit diam. Maecenas pulvinar dignissim mi eget vehicula."
 ---
 
 # Lorem ipsum dolor sit amet.

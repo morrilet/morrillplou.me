@@ -5,7 +5,8 @@ image: '/images/Bunkers_NavMeshTesting.png'
 
 AI has never been my strong suit. I enjoy thinking about it from a design perspective, but actually programming pathfinding and state machines always tends to feel like a chore. It's never my first pick, unless I'm feeling masochistic. Recently, however, I started working on the most ambitious AI I've tried to program to date, and (much to my surprise) it's coming along quite well.
 
-<!--more-->
+<!-- more -->
+
 # AI in Platformers 
 
 For those of you who don't know, platformer AI comes with a couple challenges. Firstly, finding a path to any given point in a platformer level requires that you know exactly how high you can jump and how far you can travel, which for the physics savvy among us may not be too bad, but I still struggle with this. Secondly, you have to be able to put your level into a navmesh or point graph in order to handle pathfinding. As an added bonus, my project doesn't use a grid based level, so generating a point graph is a little harder.

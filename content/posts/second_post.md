@@ -1,5 +1,4 @@
 ---
-tags: ['post']
 title: 'Some Post or Another'
 ---
 

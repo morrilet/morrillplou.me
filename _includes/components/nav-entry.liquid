@@ -1,0 +1,7 @@
+<li class="nav-entry">
+    {% include components/thumbnail with { image: item.data.image, url: item.url } %}
+    <div class="nav-entry-data">
+        <a href={{ item.url }}>{{ item.data.title }}</a>
+        <p>{% excerpt item %}</p>
+    </div>
+</li>
