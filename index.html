@@ -6,26 +6,6 @@ about: {
     in Python, C#, Javascript, and HTML / CSS. I've also dabbled in low-level hardware and the more practical side of scripting. In my free time I like to cook, code, 
     and play 'Magic the Gathering'. I'm always on the lookout for a cool project. Send me a message on <a href='https://twitter.com/morrilet' target='blank'>Twitter</a> to chat about code!",
 }
-game_previews: {
-    title: 'Games',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
-                  ullamcorper diam, eu condimentum odio. Vestibulum in magna id ipsum 
-                  ullamcorper mattis a ac mauris.',
-    content: [
-        {
-            title: 'Game title 1',
-            body: 'Game body 1',
-            url: '/',
-            image: ''
-        },
-        {
-            title: 'Game title 2',
-            body: 'Game body 2',
-            url: '/',
-            image: ''
-        }
-    ]
-}
 site_previews: {
     title: 'Sites',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed 
@@ -88,15 +68,21 @@ site_previews: {
         } %}
 
         <!-- Game Previews -->
+        {% assign latest_games = collections.games %}
         {% include components/nav-section with {
-            title: game_previews.title
-            description: game_previews.description
+            title: games_nav_section.title
+            description: games_nav_section.description
+            content: latest_games
+            more: games_nav_section.more
         } %}
         
         <!-- Site Previews -->
+        {% assign latest_sites = collections.sites %}
         {% include components/nav-section with {
-            title: site_previews.title
-            description: site_previews.description
+            title: sites_nav_section.title
+            description: sites_nav_section.description
+            content: latest_sites
+            more: sites_nav_section.more
         } %}     
     </div>
 {% endblock %}

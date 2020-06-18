@@ -17,20 +17,22 @@ image: '/images/post_it_notes.jpg'
 * ~~Make blog header sticky~~
 * ~~Remove gradient from blog post title.~~
 * ~~Media queries for gutter size~~
-* Blog post preview text from the home page
+* ~~Blog post preview text from the home page~~
 * Image captions
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
 * Ignore directory for drafts
 * Product pages (games, sites, etc.)
 * Overview sections
 * Download fonts and link them using @font-face so they actually render properly on the site.
+* Table styling in blog posts.
+* Related tags to show portfolio / blog entries on each other's pages if related. (ie. MemErr Postmortem linked in MemErr game page.)
 
 # Things to learn
 
 * GraphQL
-* Eleventy (eleventy.js, specifically)
+* ~~Eleventy (eleventy.js, specifically)~~
 * Disqus
-* Sass
+* ~~Sass~~
 * Shopify?
 * Playfab
-* Travis CI
+* ~~Travis CI~~
