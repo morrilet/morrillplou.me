@@ -16,4 +16,4 @@ If you're trying to run specific steps, this list should help you out:
 * Do you need auto-updating?
     * For the whole site, use `npm run start` as described above.
     * Use `npm run watch:sass` to compile Sass files to CSS and watch for changes.
-    * Use `npm run watch:elevents` to compile all other file types to static HTML and watch for changes.
+    * Use `npm run watch:eleventy` to compile all other file types to static HTML and watch for changes.

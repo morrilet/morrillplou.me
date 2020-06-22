@@ -11,7 +11,7 @@ body {
     background-color: global.$light-color;
 }
 
-#{global.$h-tags}, p {
+#{global.$h-tags}, thead tr, p {
     color: global.$dark-color;
     font-family: global.$body-typestack;
 
@@ -42,17 +42,17 @@ body {
     
     // Mobile (size < mobile)
     @media only screen and (max-width: global.$breakpoint-mobile) {
-        padding: 24px 5%;
+        padding: 0 5%;
     }
 
     // Tablets (mobile < size < tablet)
     @media only screen and (min-width: global.$breakpoint-mobile) and (max-width: global.$breakpoint-tablet) {
-        padding: 24px 10%;
+        padding: 0 10%;
     }
 
     // Desktop (tablet < size)
     @media only screen and (min-width: global.$breakpoint-tablet) {
-        padding: 24px 20%;
+        padding: 0 20%;
     }
 }
 
@@ -74,4 +74,38 @@ button {
 button:hover {
     background-position: center;
     border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    * > tr > td {
+        padding: 0.5rem;
+    }
+
+    thead {
+        tr {
+            border-bottom: 1px solid global.$dark-color;
+        }
+        
+        * {
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    tbody {
+        td {
+            border-bottom: 1px dotted global.$dark-color;
+        }
+
+        tr:first-child td {
+            padding-top: 0.75rem;
+        }
+    }
+}
+
+ul li {
+    list-style: symbols('-');
 }

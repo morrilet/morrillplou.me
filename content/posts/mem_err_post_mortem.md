@@ -2,6 +2,81 @@
 title: 'MemErr - A Post-Mortem'
 image: '/images/posts/mem_err/MemErr_Header.png'
 date: 2016-11-20
+
+asset_sources: [
+    {
+        name: {text: 'Retro Lamps V1', link: 'https://assetstore.unity.com/packages/3d/props/interior/retro-lamps-v-1-19601'},
+        author: {text: 'Artur G.', link: 'https://assetstore.unity.com/publishers/2501'}
+    },
+    {
+        name: {text: 'Bathroom Props', link: 'https://assetstore.unity.com/packages/3d/props/furniture/bathroom-props-25255'},
+        author: {text: 'Kobra Game Studios', link: 'https://assetstore.unity.com/publishers/8676'}
+    },
+    {
+        name: {text: 'Chairs and Sofas Pack'},
+        author: {text: 'A World for Us'}
+    },
+    {
+        name: {text: 'Yughues Free Fabric Materials', link: 'https://assetstore.unity.com/packages/2d/textures-materials/fabric/yughues-free-fabric-materials-13002'},
+        author: {text: 'Nobiax / Yughues', link: 'https://assetstore.unity.com/publishers/4986'}
+    },
+    {
+        name: {text: 'Yughues Free Wooden Floor Materials', link: 'https://assetstore.unity.com/packages/2d/textures-materials/wood/yughues-free-wooden-floor-materials-13213'},
+        author: {text: 'Nobiax / Yughues', link: 'https://assetstore.unity.com/publishers/4986'}
+    },
+    {
+        name: {text: 'Paintings Free', link: 'https://assetstore.unity.com/packages/3d/props/interior/paintings-free-44185'},
+        author: {text: 'Webcadabra', link: 'https://assetstore.unity.com/publishers/9123'}
+    },
+    {
+        name: {text: 'Old Pans'},
+        author: {text: '3DRedModels'}
+    },
+    {
+        name: {text: 'Clock', link: 'https://assetstore.unity.com/packages/3d/props/interior/clock-4250'},
+        author: {text: 'VIS Games', link: 'https://assetstore.unity.com/publishers/260'}
+    },
+    {
+        name: {text: 'Record Player', link: 'https://assetstore.unity.com/packages/3d/props/interior/record-player-4249'},
+        author: {text: 'VIS Games', link: 'https://assetstore.unity.com/publishers/260'}
+    },
+    {
+        name: {text: 'Books', link: 'https://assetstore.unity.com/packages/3d/props/interior/books-3356'},
+        author: {text: 'VIS Games', link: 'https://assetstore.unity.com/publishers/260'}
+    },
+    {
+        name: {text: 'TV Furniture', link: 'https://assetstore.unity.com/packages/3d/props/electronics/tv-furniture-60122'},
+        author: {text: 'Enozone', link: 'https://assetstore.unity.com/publishers/1455'}
+    },
+    {
+        name: {text: 'Flatscreen TV', link: 'https://assetstore.unity.com/packages/3d/props/electronics/flatscreen-tv-9721'},
+        author: {text: 'Rutger Klunder', link: 'https://assetstore.unity.com/publishers/2829'}
+    },
+    {
+        name: {text: 'Fridge Old and New', link: 'https://assetstore.unity.com/packages/3d/props/electronics/fridge-old-and-new-24196'},
+        author: {text: 'mgsvevo', link: 'https://assetstore.unity.com/publishers/9104'}
+    },
+    {
+        name: {text: 'Tudor Beams & Plaster', link: 'https://assetstore.unity.com/packages/2d/textures-materials/wood/tudor-beams-plaster-8058'},
+        author: {text: 'Shape of Sound Ltd', link: 'https://assetstore.unity.com/publishers/3080'}
+    },
+    {
+        name: {text: 'Free Furniture Pack 1'},
+        author: {text: 'Ka Design'}
+    },
+    {
+        name: {text: 'Simple Wall Lamp', link: 'https://assetstore.unity.com/packages/3d/props/simple-wall-lamp-69411'},
+        author: {text: 'FlatRiver', link: 'https://assetstore.unity.com/publishers/22488'}
+    },
+    {
+        name: {text: '10 Skyboxes Pack: Day - Night', link: 'https://assetstore.unity.com/packages/2d/textures-materials/sky/10-skyboxes-pack-day-night-32236'},
+        author: {text: 'Wello Soft', link: 'https://assetstore.unity.com/publishers/11882'}
+    },
+    {
+        name: {text: 'Plaster Materials', link: 'https://assetstore.unity.com/packages/2d/textures-materials/building/plaster-materials-44128'},
+        author: {text: 'Mikolaj Spychal', link: 'https://assetstore.unity.com/publishers/12326'}
+    }
+]
 ---
 
 Of all the games I’ve made for game jams, [MemErr](http://gamejolt.com/games/memerr/208550) flew closest to the sun. I really felt the time constraints this time around, as the development process was cut short by other plans. Asylum Jam also put me well outside my comfort zone (I never quite subscribed to the horror genre). Despite all of this, I feel that I came away from it with a relatively complete game and a few new tools tucked away.
@@ -50,10 +125,29 @@ I honestly wasn’t sure how the game would turn out, considering how much time 
 
 I’d like to extend a huge thank you to anyone who has put free assets on the Unity asset store. These people made getting back into 3D development in a jam setting much easier for me, and I wanted to give something back to the community. So, in the spirit of giving back, here’s a link to the [GitHub repository](https://github.com/morrilet/MemErr) I made for this game, as well as a list of all the assets I found on the asset store and used to make MemErr.
 
-| Asset Name                                                               | Author                                                                                                    |   |   |   |
-|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---|---|---|
-| [Retro Lamps V1](https://www.assetstore.unity3d.com/en/#!/content/19601) | [Artur G.](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:2501) |   |   |   |
-|                                                                          |                                                                                                           |   |   |   |
-|                                                                          |                                                                                                           |   |   |   |
+<table>
+    <thead>
+        <tr>
+            <td>Asset Name</td>
+            <td>Author</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%- for asset in asset_sources -%}
+        <tr>
+            {%- if asset.name.link -%}
+                <td><a target='blank' href={{ asset.name.link }}>{{ asset.name.text }}</a></td>
+            {%- else -%}
+                <td>{{ asset.name.text }}</td>
+            {%- endif -%}
+            {%- if asset.author.link -%}
+                <td><a target='blank' href={{ asset.author.link }}>{{ asset.author.text }}</a></td>
+            {%- else -%}
+                <td>{{ asset.author.text }}</td>
+            {%- endif -%}
+        </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
 
 **I'd like to give an extra special thanks to VIS Games, whose free Clock and Record Player assets came with controller scripts. Those were super helpful.*
