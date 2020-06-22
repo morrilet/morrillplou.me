@@ -22,6 +22,7 @@ body {
 
 #{global.$a-tags} {
     color: global.$dark-accent-color;
+    font-family: global.$body-typestack;
     font-weight: bold;
     text-decoration: none;
     padding: 2px;
@@ -32,10 +33,6 @@ body {
     background-color: global.$dark-color;
     background-image: global.$accent-gradient;
     border-radius: 3px;
-
-    // &.inverted {
-    //     color: $light-color;
-    // }
 }
 
 .responsive-gutters {
@@ -53,6 +50,26 @@ body {
     // Desktop (tablet < size)
     @media only screen and (min-width: global.$breakpoint-tablet) {
         padding: 0 20%;
+    }
+}
+
+p, .responsive-line-height {
+
+    &:not(.no-responsive-line-height) {
+        // Mobile (size < mobile)
+        @media only screen and (max-width: global.$breakpoint-mobile) {
+            line-height: normal;
+        }
+
+        // Tablets (mobile < size < tablet)
+        @media only screen and (min-width: global.$breakpoint-mobile) and (max-width: global.$breakpoint-tablet) {
+            line-height: 1.5em;
+        }
+
+        // Desktop (tablet < size)
+        @media only screen and (min-width: global.$breakpoint-tablet) {
+            line-height: 2.0em;
+        }
     }
 }
 

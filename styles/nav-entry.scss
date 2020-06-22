@@ -4,16 +4,14 @@
     display: flex;
     list-style: none;
     margin-top: 2.5rem;
-    
-    a {
-        margin-top: 0;
-    }
 
     .thumbnail {
         min-width: 5rem;
         margin-right: 1rem;
     }
-
-    .nav-entry-data {
+    
+    .nav-entry-title {
+        margin-top: 0;
+        font-size: 1.15em;
     }
 }
