@@ -1,0 +1,14 @@
+<div class="nav-section">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <nav>
+        {%- for el in content %}
+            {% include components/nav-entry with { item: el } %}
+        {%- endfor %}
+    </nav>
+    {% if more %}
+        <span class="nav-section-more">
+            <a href={{ more }}>View All</a>
+        </span>
+    {% endif %}
+</div>
