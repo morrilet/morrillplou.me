@@ -1,6 +1,7 @@
 ---
 title: 'Platformer Pathfinding with Pre-Recorded Inputs'
 image: '/images/Bunkers_NavMeshTesting.png'
+date: 2017-11-28
 ---
 
 AI has never been my strong suit. I enjoy thinking about it from a design perspective, but actually programming pathfinding and state machines always tends to feel like a chore. It's never my first pick, unless I'm feeling masochistic. Recently, however, I started working on the most ambitious AI I've tried to program to date, and (much to my surprise) it's coming along quite well.
@@ -49,7 +50,7 @@ Once I've generated an edge, we can load it into the point graph pretty easily. 
 
 # Traversal
 
-Graph traversal is pretty straightforward here. We just assign a weight to the edges based on the duration of their input sequence, the distance between their start and end points, and their distance from the point graph agent. Once we've weighted our point graph, we can use [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find a path from one node to another. I won't go too in depth on Dijkstra's algorithm because other people have explained it better than I ever could, but I will note that I'm using it because I had a hard time figuring out a proper heuristic to use for A*. Anyway, once a path is found, we simply send the agent towards the first edge's starting point. When it's there we stop taking input from the state machine. Instead, we take our input from an input sequence, going keyframe by keyframe. After we're done reading this input sequence, we re-evaluate our path and start the process over again until we've reached our target node.
+Graph traversal is pretty straightforward here. We just assign a weight to the edges based on the duration of their input sequence, the distance between their start and end points, and their distance from the point graph agent. Once we've weighted our point graph, we can use [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find a path from one node to another. I won't go too in depth on Dijkstra's algorithm because other people have explained it better than I ever could, but I will note that I'm using it because I had a hard time figuring out a proper heuristic to use for [A*](https://en.wikipedia.org/wiki/A*_search_algorithm). Anyway, once a path is found, we simply send the agent towards the first edge's starting point. When it's there we stop taking input from the state machine. Instead, we take our input from an input sequence, going keyframe by keyframe. After we're done reading this input sequence, we re-evaluate our path and start the process over again until we've reached our target node.
 
 # Conclusion
 
