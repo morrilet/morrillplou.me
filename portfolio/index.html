@@ -1,1 +1,12 @@
 {% include templates/base-page %}
+
+{% block content %}
+    <div class="responsive-gutters">
+        <div class="nav-section">
+            <h1>Games</h1>
+            {%- for game in collections.games %}
+                {% include components/nav-entry with { item: game } %}
+            {%- endfor %}
+        </div>
+    </div>
+{% endblock %}
