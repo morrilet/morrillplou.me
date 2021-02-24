@@ -39,3 +39,5 @@ some common tasks:
     As a bonus, put your image list in the front-matter!
 * Code Snippets
     * Nest your sample code between ```` ``` js (or any other extension) ```` and ```` ``` ```` tags to create a multi-line, formatted snippet.
+* Slug Customization
+    * Add the `slug` front-matter tag. If unused we'll default to a cleaned-up version of the `title`.

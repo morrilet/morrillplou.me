@@ -22,10 +22,11 @@ image: '/images/post_it_notes.jpg'
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
 * Ignore directory for drafts
 * Product pages (games, sites, etc.)
-* Overview sections
+* ~~Overview sections~~
 * Download fonts and link them using @font-face so they actually render properly on the site.
 * Table styling in blog posts.
 * Related tags to show portfolio / blog entries on each other's pages if related. (ie. MemErr Postmortem linked in MemErr game page.)
+* Contact pop-up.
 
 # Things to learn
 

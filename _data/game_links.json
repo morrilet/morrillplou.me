@@ -1,0 +1,10 @@
+{
+    "gamejolt": {
+        "src": "/icons/gamejolt-logo-light.png",
+        "alt": "GameJolt"
+    },
+    "itchio": {
+        "src": "/icons/itch.io/logos/itchio-logo-black.png",
+        "alt": "itch.io"
+    }
+}

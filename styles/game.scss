@@ -4,6 +4,9 @@
 @use 'image-slider';
 @use 'desaturated-header';
 
+// TODO: Media queries to move the screenshots from the side to the top.
+// What follows is for the large-sized screens.
+
 #content {
     width: 100%;
     box-sizing: border-box;
@@ -25,5 +28,23 @@
         margin-right: 10%;
         margin-left: 10%;
         width: 80%;
+    }
+
+    #links {
+        width: 100%;
+
+        img {
+            max-width: 8rem;
+        }
+    }
+
+    #description {
+        width: 75%;
+        float: left;
+    }
+
+    #screenshots {
+        width: 25%;
+        float: right;
     }
 }
