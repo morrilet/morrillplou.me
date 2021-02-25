@@ -20,24 +20,26 @@
             </div>
         </div>
         <div id='content' class='responsive-gutters responsive-line-height'>
-            <div id="description">
-                {{ content }}
-            </div>
             <div id='screenshots' class=''>
                 {% for screenshot in screenshots %}
                     <img alt="{{ screenshot.alt }}" src="{{ screenshot.src }}"/>
                 {% endfor %}
             </div>
-            <div id='links'>
-                {% for link_obj in links %}
-                    {% assign key = link_obj.icon | downcase %}
-                    <div class="social-link-container">
-                        <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
-                            <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
-                        </a>
+            <!-- <div id="content-wrapper"> -->
+                <div id="description">
+                    <div id='links'>
+                        {% for link_obj in links %}
+                            {% assign key = link_obj.icon | downcase %}
+                            <div class="social-link-container">
+                                <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
+                                    <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
+                                </a>
+                            </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
-            </div>
+                    {{ content }}
+                </div>
+            <!-- </div> -->
         </div>
     </body>
     <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>

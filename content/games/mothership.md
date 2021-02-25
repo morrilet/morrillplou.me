@@ -1,17 +1,35 @@
 ---
 title: Mothership
-image: '/images/post_it_notes.jpg'
+image: '/images/games/mothership/mothership_banner_notext.webp'
 screenshots: [
-    {alt: "A test image", src: "/images/Diorama.png"},
-    {alt: "A second test image", src: "/images/Diorama.png"},
+    {alt: "The menu screen of Mothership", src: "/images/games/mothership/mothership_0.webp"},
+    {alt: "A screenshot depicting combat in Mothership", src: "/images/games/mothership/mothership_1.webp"},
+    {alt: "A screenshot depicting more combat in Mothership", src: "/images/games/mothership/mothership_2.webp"},
+    {alt: "A screenshot depicting yet more combat in Mothership", src: "/images/games/mothership/mothership_3.webp"},
+    {alt: "A screenshot depicting the final boss in Mothership", src: "/images/games/mothership/mothership_4.webp"},
 ]
 links: [
     {icon: "GameJolt", href: "https://gamejolt.com/games/mothership/94259"},
 ]
+excerpt: Mothership is a fast paced, wave based shooter made for MiniLD 62.
 ---
 
-Test test test
+Aliens are invading! REAL LIFE aliens!! Fight through their lines of defense and destroy the Mothership before all of space falls to these invaders.
 
-<!-- more -->
+Mothership is a fast paced, wave based shooter made for MiniLD 62.
 
-Test some more.
+**Controls**
+
+WASD :: Move
+
+Mouse :: Look
+
+Spacebar :: Shoot
+
+**Credits**
+
+Programming :: morrilet
+
+Art :: morrilet
+
+Music :: Trip
