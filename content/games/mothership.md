@@ -1,6 +1,7 @@
 ---
 title: Mothership
 image: '/images/games/mothership/mothership_banner_notext.webp'
+date: 2015-09-28
 screenshots: [
     {alt: "The menu screen of Mothership", src: "/images/games/mothership/mothership_0.webp"},
     {alt: "A screenshot depicting combat in Mothership", src: "/images/games/mothership/mothership_1.webp"},

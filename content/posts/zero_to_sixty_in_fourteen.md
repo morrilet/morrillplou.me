@@ -1,6 +1,6 @@
 ---
 title: 'Zero to Sixty in 14 Seconds'
-image: '/images/post_it_notes.jpg'
+image: '/images/posts/cleandatabase.jpg'
 excerpt: "In school we're taught about database normalization and the dream of third normal form - the platonic ideal of the database.
 When starting a new project I think we all strive for a clean, cohesive schema. At some point, however, changes must be made.
 I agonize over these changes. I work hard to keep my database clean, but I'm slowly gathering that I'm better off just... not."

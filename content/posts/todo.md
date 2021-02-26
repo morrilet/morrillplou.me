@@ -27,6 +27,9 @@ image: '/images/post_it_notes.jpg'
 * Table styling in blog posts.
 * Related tags to show portfolio / blog entries on each other's pages if related. (ie. MemErr Postmortem linked in MemErr game page.)
 * Contact pop-up.
+* Split games into jam / long-form / professional
+* Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)
+* Fix typography differences in lists vs paragraphs
 
 # Things to learn
 

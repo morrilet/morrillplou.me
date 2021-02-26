@@ -30,6 +30,7 @@ some common tasks:
     * Add the `image` front-matter tag.
 * Date Overrides
     * Add the `date` front-matter tag to override the default file (post) creation date.
+    * Add the `date_modified` front-matter tag to specify an edit date (shown alongside the post creation date.)
 * Excerpts
     * Use the `excerpt` front-matter tag
     * Add `<!-- more -->` to the body of the post where you want the excerpt to stop. Beware that this also captures formatting.
