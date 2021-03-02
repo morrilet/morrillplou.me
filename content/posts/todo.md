@@ -30,6 +30,7 @@ image: '/images/post_it_notes.jpg'
 * Split games into jam / long-form / professional
 * Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)
 * Fix typography differences in lists vs paragraphs
+* Center images in thumbnails.
 
 # Things to learn
 

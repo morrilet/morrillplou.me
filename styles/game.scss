@@ -26,6 +26,14 @@
                 max-width: 16rem;
                 margin: 16px 8px 16px 8px;
             }
+            
+            .video-container {
+                margin: 16px 8px 16px 8px;
+
+                iframe {
+                    height: 100%;
+                }
+            }
         }
     }
 }
@@ -35,17 +43,34 @@
 @media only screen and (min-width: global.$breakpoint-tablet) {
     #content {
         #description {
-            width: 65%;
+            width: 60%;
             order: 1;
         }
 
         #screenshots {
-            width: 35%;
+            width: 40%;
+            padding: 8px 16px 8px 16px;
+            box-sizing: border-box;
             order: 2;
             
-            img {
+            img, .video-container {
                 width: 100%;
-                margin: 8px 16px 8px 16px;
+                margin: 0;
+            }
+            
+            .video-container {
+                display: inline-block;
+                position: relative;
+                height: 0;
+                padding-bottom: 56.25%;  // 16:9 aspect ratio.
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -69,13 +94,21 @@
     pre {
         box-sizing: border-box;
     }
-    
-    img {
-        position: relative;
-        margin-right: 10%;
-        margin-left: 10%;
-        width: 80%;
-    }
+
+    // .video-container {
+    //     position: relative;
+    //     width: 100%;
+    //     height: 0;
+    //     padding-bottom: 56.25%;  // 16:9 aspect ratio.
+
+    //     iframe {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+    // }
     
     #description {
             #links {
