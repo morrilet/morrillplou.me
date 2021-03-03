@@ -13,7 +13,8 @@ screenshots: [
     {alt: "The rover travelling to Mars to Earth.", src: "/images/games/rovr/rovr_4.png"},
 ]
 links: [
-    {icon: "GameJolt", href: "https://gamejolt.com/games/memerr/208550"},
+    {icon: "GameJolt", href: "https://gamejolt.com/games/rovr/252195"},
+    {icon: "ItchIO", href: "https://morrilet.itch.io/rovr"},
 ]
 excerpt: The High Council of Earth has sent you to explore the outer reaches of the solar system, hopefully without blasting yourself off into space. Made for Ludum Dare 38.
 ---

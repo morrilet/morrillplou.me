@@ -31,6 +31,9 @@ image: '/images/post_it_notes.jpg'
 * Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)
 * Fix typography differences in lists vs paragraphs
 * Center images in thumbnails.
+* Add dates to nav entries where available
+* Lightbox for screenshots in game pages.
+* Optional thumbnail image that isn't the banner image.
 
 # Things to learn
 
