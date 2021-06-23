@@ -21,7 +21,7 @@ image: '/images/post_it_notes.jpg'
 * Image captions
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
 * Ignore directory for drafts
-* Product pages (games, sites, etc.)
+* ~~Product pages (games, sites, etc.)~~
 * ~~Overview sections~~
 * Download fonts and link them using @font-face so they actually render properly on the site.
 * Table styling in blog posts.
@@ -34,6 +34,7 @@ image: '/images/post_it_notes.jpg'
 * Add dates to nav entries where available
 * Lightbox for screenshots in game pages.
 * Optional thumbnail image that isn't the banner image.
+* Youtube embeds in markdown (would like to embed Line devlog in game page.)
 
 # Things to learn
 

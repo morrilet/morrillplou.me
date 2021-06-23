@@ -25,10 +25,10 @@ This game is a top-down shooter roguelike featuring shapeshifting action.
 
 'WASD' or arrow keys to move, LMB to shoot.
 
-**Credits** 
+**Credits**
 
-* Jeremy Helsel (@JIHlucky7)
-* Ethan Morrill-Ploum (@morrilet) 
-* Joshua Ruffolo (@jruff7) of Tsaik (@TsaikYara)
+* Ethan Morrill-Ploum [@morrilet](https://twitter.com/morrilet)
+* Jeremy Helsel [@JIHlucky7](https://twitter.com/JIHlucky7)
+* Joshua Ruffolo [@jruff7](https://twitter.com/jruff7) of Tsaik [@TsaikYara](https://twitter.com/TsaikYara)
 
-Additional sound effects and sprites from Matt Carollo (@trip_yuh) and Jasen Helsel.
+Additional sound effects and sprites from Matt Carollo [@trip_yuh](https://twitter.com/trip_yuh) and Jasen Helsel.
