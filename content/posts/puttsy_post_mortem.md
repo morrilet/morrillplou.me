@@ -66,6 +66,8 @@ I think I managed to get quite a bit done during the 72 hours, but I didn’t do
 * Build the credits menu.
 * Submission hour!
 
+<!-- We can use the embed plugin to embed just the link, but we miss out on styling that way, I think. Look into it. -->
+<!-- https://www.youtube.com/embed/WXd1eo5CNSY -->
 <iframe width="680" height="405" src="https://www.youtube.com/embed/WXd1eo5CNSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Reflections

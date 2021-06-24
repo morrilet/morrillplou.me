@@ -41,6 +41,7 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('_includes/styles');
     eleventyConfig.addPassthroughCopy('_includes/images');
     eleventyConfig.addPassthroughCopy({'node_modules/@glidejs/glide/dist': 'bin/glide/'})
+    eleventyConfig.addPassthroughCopy({'node_modules/lightbox2/dist': 'bin/lightbox/'})
     eleventyConfig.addPassthroughCopy('icons');
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addShortcode('excerpt', (post) => getExcerpt(post))

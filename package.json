@@ -32,6 +32,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@glidejs/glide": "^3.4.1",
     "eleventy-plugin-embed-everything": "^1.13.2",
+    "lightbox2": "^2.11.3",
     "sass": "^1.26.8"
   }
 }

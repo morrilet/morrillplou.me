@@ -4,9 +4,6 @@
 @use 'image-slider';
 @use 'desaturated-header';
 
-// TODO: Media queries to move the screenshots from the side to the top.
-// What follows is for the large-sized screens.
-
 // Tablet devices and smaller...
 @media only screen and (max-width: global.$breakpoint-tablet) {
     #content {
