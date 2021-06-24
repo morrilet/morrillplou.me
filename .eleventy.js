@@ -1,4 +1,5 @@
 const syntaxHighlighter = require('@11ty/eleventy-plugin-syntaxhighlight');
+const embedEverything = require('eleventy-plugin-embed-everything');
 const markdownIt = require('markdown-it');
 const months = [
     'January',
@@ -50,6 +51,7 @@ module.exports = (function(eleventyConfig) {
 
     // Plugins
     eleventyConfig.addPlugin(syntaxHighlighter);
+    eleventyConfig.addPlugin(embedEverything);
 
     // Filters
     eleventyConfig.addFilter('characterCount', (str) => {
