@@ -16,12 +16,12 @@ excerpt: A lone diver trapped under the ice must free these treacherous waters f
 
 A lone diver trapped under the ice must free these treacherous waters from an even greater threat. Destroy nests with your harpoon gun in three unique stages, all while evading foes from the deep. Made in Stencyl for Stencyl Jam 17.
 
-**Controls:**
+## Controls
 
 * 'WASD'/Arrow keys to swim.
 * 'Z'/Space/Left mouse to shoot a harpoon.
 
-**Credits:**
+## Credits
 
 * Ethan Morrill-Ploum
     * Art
@@ -32,7 +32,7 @@ A lone diver trapped under the ice must free these treacherous waters from an ev
     * Music
     * Sounds
 
-**Updates:**
+## Updates
 
 * 1.0.0 -- Initial release.
 * 1.0.1 -- Fixed a bug that broke the game when it is replayed.

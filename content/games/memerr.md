@@ -15,14 +15,14 @@ excerpt: Read post-it notes and find a way out of the house to escape an unknown
 
 Read post-it notes and find a way out of the house to escape an unknown threat. MemErr was made for Asylum Jam 2016 and is loosely based on a Reddit post about a CO2 leak.
 
-**Controls:**
+## Controls
 
 * WASD to move
 * Mouse to look
 * Space to read
 * Shift to sprint
 
-**Credits:**
+## Credits
 
 * Ethan Morrill-Ploum
 

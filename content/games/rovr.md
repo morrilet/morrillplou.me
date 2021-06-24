@@ -21,11 +21,11 @@ excerpt: The High Council of Earth has sent you to explore the outer reaches of 
 
 The High Council of Earth has sent you to explore the outer reaches of the solar system (hopefully without blasting yourself off into space). They're expecting your report any minute, so get out there and do your world proud.
 
-**About**
+## About
 
 rovR is a casual puzzle game about exploring space as, you guessed it, a rover. The puzzles take an even mix of planning and skill, and the folks you meet along the way will bring joy to you for years to come.
 
-**User Reviews**
+## User Reviews
 
 Still not convinced that you would like rovR? Just read these glowing reviews!
 
@@ -38,14 +38,14 @@ Neil DeGrasse Tyson:
 My girlfriend:
 > *Dude, I f\*\*\*ing told you to stop following me.*
 
-**Controls**
+## Controls
 
 * 'A' and 'D' to move.
 * 'Space' to jump.
 * 'Shift' to zoom out.
 * 'R' to restart the level.
 
-**Credits**
+## Credits
 
 * Ethan Morrill-Ploum
     * Art, code, level design, sound effects.
@@ -55,7 +55,7 @@ My girlfriend:
 Follow us at 
 [@morrilet](https://twitter.com/morrilet) and [@catmaggiori](https://twitter.com/catmaggiori).
 
-**Music used**
+## Music used
 
 * [Star Commander 1](https://www.dl-sounds.com/royalty-free/star-commander1/)
 * [Calm Background Organ](https://www.freesound.org/people/PatrickLieberkind/sounds/214334/)

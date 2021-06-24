@@ -21,7 +21,7 @@ excerpt: A local multiplayer shooter about working together to fight foes that s
 
 Note: **Gamepad required.**
 
-**The Rules**
+## The Rules
 
 * Bullets are either corporeal or incorporeal.
 * Any bullets that pass through the ghost player's spectral rift switch between being corporeal or incorporeal.
@@ -30,20 +30,19 @@ Note: **Gamepad required.**
 * Players share a health total.
 * Friendly fire is on.
 
-**Gunner Controls**
+## Gunner Controls
 
 * W/A/S/D to move.
 * Mouse to aim.
 * Left mouse button (hold) to shoot.
 
-**Ghost Controls**
+## Ghost Controls
 
 * Left analog stick to move.
 * Right analog stick to look.
 * X (hold) to activate spectral rift.
 
-
-**Credits**
+## Credits
 
 * Ethan Morrill-Ploum [@morrilet](https://twitter.com/morrilet)
     * Programming

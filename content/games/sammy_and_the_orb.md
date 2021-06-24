@@ -19,7 +19,7 @@ excerpt: A game made in 72 hours for Ludum Dare
 
 **Sammy and the Orb** is a puzzle platformer set in an abandoned laboratory. You play as Sammy, a small, set-upon robot who discovers an orb that can manipulate time and bring in objects from other dimensions. Puzzle your way through five unique levels and help Sammy fulfill his mighty destiny!
 
-**Gameplay**
+## Gameplay
 
 You can create three types of platforms for traversing the world.
 
@@ -34,7 +34,7 @@ Placing platforms is contextual, meaning the platform you place depends on what 
 * If you're moving left / right you'll place a left / right **Conveyor** platform.
 * If you're standing still you'll place a **Gravity** platform.
 
-**Controls**
+## Controls
 
 * **A / D** - move left and right
 * **W / Space** - jump
@@ -43,7 +43,7 @@ Placing platforms is contextual, meaning the platform you place depends on what 
 * **Hold Shift + R** - clear platforms
 * **1-4** - Emote
 
-**Credits**
+## Credits
 
 Ethan Morrill-Ploum [@morrilet](https://twitter.com/morrilet)
 * Programming

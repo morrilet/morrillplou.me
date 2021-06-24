@@ -1,5 +1,9 @@
 <li class="nav-entry">
-    {% include components/thumbnail with { image: item.data.image, url: item.url } %}
+    {% if item.data.thumbnail %}
+        {% include components/thumbnail with { image: item.data.thumbnail, url: item.url } %}
+    {% else %}
+        {% include components/thumbnail with { image: item.data.image, url: item.url } %}
+    {% endif %}
     <div class="nav-entry-data">
         <a class='nav-entry-title' href={{ item.url }}>{{ item.data.title }}</a>
         {% excerpt item %}

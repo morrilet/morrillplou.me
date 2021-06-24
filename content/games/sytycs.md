@@ -15,17 +15,16 @@ links: [
 excerpt: SYTYCS is a top-down shooter / roguelike featuring shapeshifting action. Made for Ludum Dare 35.
 ---
 
-Made for Ludum Dare 35.
 
-You! Yes, you! Do you think you can science? Welcome aboard the first ever infinite space ship. Cozy, right? THINK AGAIN. This place is run by an alien mad scientist and it's filled with henchmen. Do what you must...
+**You! Yes, you!** Do you think you can science? Welcome aboard the first ever infinite space ship. Cozy, right? THINK AGAIN. This place is run by an alien mad scientist and it's filled with henchmen. Do what you must...
 
-This game is a top-down shooter roguelike featuring shapeshifting action.
+This game is a top-down shooter roguelike featuring shapeshifting action made for Ludum Dare 35.
 
-**Controls** 
+## Controls 
 
 'WASD' or arrow keys to move, LMB to shoot.
 
-**Credits**
+## Credits
 
 * Ethan Morrill-Ploum [@morrilet](https://twitter.com/morrilet)
 * Jeremy Helsel [@JIHlucky7](https://twitter.com/JIHlucky7)

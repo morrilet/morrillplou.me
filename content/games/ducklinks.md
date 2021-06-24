@@ -20,7 +20,7 @@ excerpt: A time-based collectathon about building a rickety chain of ducklings. 
 
 You play as a mama duck trying to get her ducklings (and some stragglers) into the cool waters of the park fountain. They'll follow you wherever you go, but be warned: they're highly distractible!
 
-**Gameplay**
+## Gameplay
 
 Collect ducklings around each level and bring them to the fountain to score points. Levels end when you run out of time or collect every available duckling. You're given a star rating based on how many points you get, but you're always allowed to go to the next level!
 
@@ -34,7 +34,7 @@ Collect ducklings around each level and bring them to the fountain to score poin
 
 **Breadcrumbs** and **Squirrels** are very enticing! They will cause your ducklings to break away from you.
 
-**Credits**
+## Credits
 
 **Ethan Morrill-Ploum** ([@morrilet](https://twitter.com/morrilet)) - Programming,  design
 

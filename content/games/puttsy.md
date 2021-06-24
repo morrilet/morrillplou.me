@@ -1,6 +1,7 @@
 ---
 title: Puttsy
 image: '/images/games/puttsy/puttsy_banner.png'
+thumbnail: '/images/games/puttsy/puttsy_thumbnail.png'
 date: 2018-04-24
 videos: [
     "https://www.youtube.com/embed/WXd1eo5CNSY",
@@ -20,12 +21,13 @@ excerpt: Don't go over par and be sure to bring your thinking cap for this charm
 
 Puttsy is a mini-golf tower defense game where you have to strategically place towers to get a hole-in-one! Don't go over par and be sure to bring your thinking cap for this charming mashup.
 
-**How to Play**
+## How to Play
+
 * Click and drag towers onto the walls of the level.
 * Right click a tower to rotate it.
 * Move your mouse to swivel a cannon when the ball is in it.
 * Click and hold to shoot the ball into your carefully laid towers
 
-**About**
+## About
 
 Puttsy is a short game made for Ludum Dare 41 with the theme "Combine 2 Incompatible Genres". It was made by myself ([@morrilet](https://twitter.com/morrilet)) and a few other fine folk over the course of 72 hours.

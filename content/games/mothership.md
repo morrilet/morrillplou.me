@@ -19,7 +19,7 @@ Aliens are invading! REAL LIFE aliens!! Fight through their lines of defense and
 
 Mothership is a fast paced, wave based shooter made for MiniLD 62.
 
-**Controls**
+## Controls
 
 WASD :: Move
 
@@ -27,7 +27,7 @@ Mouse :: Look
 
 Spacebar :: Shoot
 
-**Credits**
+## Credits
 
 Programming :: morrilet
 

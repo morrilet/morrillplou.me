@@ -20,17 +20,17 @@ Meth Horse loves his meth. That's implied, of course. But that's not really his 
 Made for Ludum Dare 37.
 
 
-**Controls:**
+## Controls
 
 'WASD' or Arrow Keys to move.
 
 
-**Gameplay:**
+## Gameplay
 
 Pressing forward will birth a meth baby. This is how Meth Horse propels himself, as he has only a tiny flipper and cannot properly swim on his own. Poor Meth Horse.
 
 
-**Credits:**
+## Credits
 
 * Ethan Morrill-Ploum 
     * Lead programmer, lead artist, gameplay designer.
