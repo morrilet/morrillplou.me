@@ -1,6 +1,7 @@
 ---
 title: Spooks & Shells
 image: '/images/games/spooks_and_shells/spooks_and_shells_background.png'
+thumbnail: '/images/games/spooks_and_shells/spooks_and_shells_banner.png'
 date: 2021-02-22
 screenshots: [
     {alt: "The cover image of Spooks & Shells.", src: "/images/games/spooks_and_shells/spooks_and_shells_banner.png"},

@@ -1,6 +1,7 @@
 ---
 title: Cold Waters
 image: '/images/games/cold_waters/cold_waters_banner.webp'
+thumbnail: '/images/games/cold_waters/cold_waters_1.webp'
 date: 2016-12-18
 screenshots: [
     {alt: "A lone diver evading enemies at astounding depths.", src: "/images/games/cold_waters/cold_waters_0.webp"},

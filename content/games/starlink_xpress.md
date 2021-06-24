@@ -1,6 +1,7 @@
 ---
 title: StarLink Xpress
 image: '/images/games/starlink_xpress/starlink_xpress_background.png'
+thumbnail: '/images/games/starlink_xpress/starlink_xpress_banner.png'
 date: 2018-04-24
 screenshots: [
     {alt: "The cover image of StarLink Xpress.", src: "/images/games/starlink_xpress/starlink_xpress_banner.png"},

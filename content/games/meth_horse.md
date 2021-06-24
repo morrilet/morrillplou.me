@@ -1,6 +1,7 @@
 ---
 title: Meth Horse
-image: '/images/games/meth_horse/meth_horse_banner.gif'
+image: '/images/games/meth_horse/meth_horse_banner_no_title.gif'
+thumbnail: '/images/games/meth_horse/meth_horse_thumbnail.png'
 date: 2016-12-12
 date_modified: 2017-11-28
 screenshots: [

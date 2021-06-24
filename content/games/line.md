@@ -1,6 +1,7 @@
 ---
 title: Line
-image: "/images/games/line/LD_BannerImage_A.png"
+image: "/images/games/line/LD_BannerImage_NoTitle.png"
+thumbnail: "/images/games/line/ItchIO_CoverImage.png"
 date: 2021-04-27
 videos: [
     "https://www.youtube.com/embed/zZOpsso5e3w",

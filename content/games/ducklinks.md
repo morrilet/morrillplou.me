@@ -1,6 +1,7 @@
 ---
 title: Ducklinks
-image: "/images/games/ducklinks/ItchHeader.png"
+image: "/images/games/ducklinks/HeaderBackground.png"
+thumbnail: "/images/games/ducklinks/DucklinksThumbnail.png"
 date: 2021-06-13
 screenshots: [
     {alt: "The cover image for Ducklinks.", src: "/images/games/ducklinks/ItchCoverImage.png"},

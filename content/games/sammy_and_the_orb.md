@@ -1,6 +1,7 @@
 ---
 title: Sammy and the Orb
 image: "/images/games/sammy_and_the_orb/Sammy_Boxart.png"
+thumbnail: "/images/games/sammy_and_the_orb/Sammy_Thumbnail.png"
 date: 2020-10-05
 screenshots: [
     {alt: "The cover image of Sammy and the Orb.", src: "/images/games/sammy_and_the_orb/Sammy_Boxart_Title.png"},
