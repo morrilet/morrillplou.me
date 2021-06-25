@@ -7,8 +7,7 @@
         <title>Blog | {{ title }}</title>
         <link rel="stylesheet" type="text/css" href="/styles/post.css"/>
         <link rel="stylesheet" type="text/css" href="/styles/prism/themes/okaidia.css"/>
-        <link rel="stylesheet" type="text/css" href="/bin/glide/css/glide.core.min.css"/>
-        <link rel="stylesheet" type="text/html" href="/bin/lightbox/css/lightbox.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
     </head>
     <body>
         {% include components/header %}
@@ -34,6 +33,6 @@
         </div>
     </body>
     <script type="text/javascript" src="/js/progress_bar.js"></script>
-    <script type="text/javascript" src="/bin/lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script type="module" src="/js/glightbox_controller.js"></script>
     <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>
 </html>

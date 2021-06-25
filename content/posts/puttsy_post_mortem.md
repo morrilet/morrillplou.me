@@ -4,12 +4,25 @@ image: "/images/posts/puttsy_post_mortem/puttsy_banner.png"
 date: 2018-04-28
 excerpt: "In this post I’ll explain the timeline for Puttsy as well as some reflections on my performance during this Ludum Dare. Let’s dive in!"
 
-friday_images: [
+friday_gallery: [
     {src: "/images/posts/puttsy_post_mortem/friday_night_magic.jpg", alt: "Friday night MtG"},
     {src: "/images/posts/puttsy_post_mortem/dinner_and_brainstorming.jpg", alt: "Dinner and brainstorming"},
 ]
 
-stats_images: [
+planning_gallery: [
+    { src: "/images/posts/puttsy_post_mortem/pen_and_paper_plan.jpg", alt: "Some pen-and-paper planning from Saturday" },
+]
+
+# Not sure I like this as much as just embedding. It uses the non-youtube player in the gallery and doesn't show the play button to indicate a video in the thumbnail.
+# timelapse_gallery: [
+#     { 
+#         src: "https://www.youtube.com/watch?v=WXd1eo5CNSY", 
+#         alt: "A timelapse of the development process for Puttsy.",
+#         thumbnail: "https://img.youtube.com/vi/WXd1eo5CNSY/mqdefault.jpg",
+#     }
+# ]
+
+stats_gallery: [
     {src: "/images/posts/puttsy_post_mortem/itch_stats.png", alt: "The stats from the itch.io page from 5/19/2018"},
     {src: "/images/posts/puttsy_post_mortem/ldjam_stats.png", alt: "The statistics for Ludum Dare 41"},
     {src: "/images/posts/puttsy_post_mortem/final_scores.png", alt: "The final scores, calculated at the end of Ludum Dare 41"},
@@ -30,7 +43,7 @@ I think I managed to get quite a bit done during the 72 hours, but I didn’t do
 * Slow down a bit, play some MtG. No need to stress, right?
 * Spontaneously assemble a team of contributors.
 
-{% include components/image-slider with { images: friday_images } %}
+{% include components/image-slider with { images: friday_gallery } %}
 
 ## Saturday (00:00 – 23:59)
 * Settle on a golf tower-defense game.
@@ -41,7 +54,7 @@ I think I managed to get quite a bit done during the 72 hours, but I didn’t do
 * Set up click and drag (placeholder) towers.
 * Receive the first tower model.
 
-![Some pen-and-paper planning from Saturday](/images/posts/puttsy_post_mortem/pen_and_paper_plan.jpg)
+{% include components/image-slider with { images: planning_gallery } %}
 
 ## Sunday (00:00 – 23:59)
 * Get towers to snap to the grid.
@@ -68,7 +81,7 @@ I think I managed to get quite a bit done during the 72 hours, but I didn’t do
 
 <!-- We can use the embed plugin to embed just the link, but we miss out on styling that way, I think. Look into it. -->
 <!-- https://www.youtube.com/embed/WXd1eo5CNSY -->
-<iframe width="680" height="405" src="https://www.youtube.com/embed/WXd1eo5CNSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include components/video-embed with { src: "https://www.youtube.com/embed/WXd1eo5CNSY" } %}
 
 # Reflections
 
@@ -103,4 +116,4 @@ At the time of writing, there are still 17 days of rating left before the result
 ## Update (5/19/2018)
 Ludum Dare 41 ended a little while ago, and the results are in! [Puttsy](https://ldjam.com/events/ludum-dare/41/puttsy) did crazy well, I think, and I’m really pleased with it. While it didn’t make top 100 in any categories, it scored very consistently in the 200 range, and I think that’s amazing. A few of my previous games had managed to score top 100 in humor, but their other scores were usually well into the 1000’s, so this marks a welcome change of pace for my work. [Puttsy](https://ldjam.com/events/ludum-dare/41/puttsy) also broke the 150 download mark shortly before the end of the dare, which I was really excited to see. Anyway, I’ve written more than enough about this now, so go ahead and have a gander at the results. Enjoy, and I’ll see you all next time!
 
-{% include components/image-slider with { images: stats_images } %}
+{% include components/image-slider with { images: stats_gallery } %}

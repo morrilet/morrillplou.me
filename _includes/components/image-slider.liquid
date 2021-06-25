@@ -1,31 +1,13 @@
-<!-- <div class="glide">
-    <div class="glide__track" data-glide-el='track'>
-        <ul class="glide__slides">
-            {%- for image in images -%}
-                <li class="glide__slide">
-                    <img src={{ image.src }} alt={{ image.alt }} />
-                </li>
-            {%- endfor -%}
-        </ul>
-    </div>
-    <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-    </div>
-    <div class="glide__bullets" data-glide-el="controls[nav]">
-        {%- for image in images -%}
-            {% assign index = forloop.index | minus: 1 %}
-            <button class="glide__bullet" data-glide-dir="={{ index }}"></button>
-        {%- endfor -%}
-    </div>
-</div> -->
-
 <div class='image-slider'>
     {%- for image in images -%}
         <div class="image-slider-container">
-            <!-- <a href="{{ image.src }}" data-lightbox='test'> -->
-                <img alt="{{ image.alt }}" src="{{ image.src }}"/>
-            <!-- </a> -->
+            <a href="{{ image.src }}" class='glightbox'>
+                {%- if image.thumbnail -%}
+                    <img alt="{{ image.alt }}" src="{{ image.thumbnail }}"/>
+                {%- else -%}
+                    <img alt="{{ image.alt }}" src="{{ image.src }}"/>
+                {%- endif -%}
+            </a>
         </div>
     {%- endfor -%}
 </div>
