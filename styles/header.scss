@@ -2,7 +2,7 @@
 @use 'base_page'; // TODO Vars, not main.
 
 $header_height: 5.5em;
-$avatar_size: 4em;
+$avatar_size: 5.5em;
 
 header {
     position: fixed;
@@ -16,13 +16,16 @@ header {
     z-index: 100;
     box-sizing: border-box;
 
+    #contact {
+        cursor: pointer;
+    }
+
     #title-avatar {
         position: absolute;
         top: 0;
         bottom: 0;
 
         img {
-            width: $avatar_size;
             height: $avatar_size;
             border-radius: 6px;
             position: absolute;

@@ -25,7 +25,10 @@ body {
     font-family: global.$body-typestack;
     font-weight: bold;
     text-decoration: none;
-    padding: 2px;
+
+    &:not(.no-decoration) {
+        padding: 2px;
+    }
 }
 
 #{global.$a-tags-hover}:not(.no-decoration) {
