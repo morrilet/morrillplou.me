@@ -1,5 +1,5 @@
 import '/bin/glightbox/js/glightbox.js';
 
-window.onload = () => {
+window.addEventListener('load', () => {
     const lightbox = GLightbox({})
-};
+})

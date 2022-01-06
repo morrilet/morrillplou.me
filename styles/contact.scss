@@ -1,5 +1,7 @@
 @use 'global';
+@use 'header';
 @use 'base_page';
+@use 'generic-social-links';
 
 input[type=text], input[type=email], select, textarea {
     width: 100%;
@@ -10,4 +12,21 @@ input[type=text], input[type=email], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+}
+
+#submit-container {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 15em;
+    max-width: 100%;
+
+    input[type=submit] {
+        width: 15em;
+        max-width: 100%;
+    }
+}
+
+#form-help {
+    text-align: center;
 }

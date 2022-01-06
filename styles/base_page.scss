@@ -11,7 +11,7 @@ body {
     background-color: global.$light-color;
 }
 
-#{global.$h-tags}, thead tr, p {
+#{global.$h-tags}, thead tr, p, label {
     color: global.$dark-color;
     font-family: global.$body-typestack;
 
@@ -76,24 +76,28 @@ p, .responsive-line-height {
     }
 }
 
-button {
-    // background-color: $dark-accent-color;
+input[type=submit], button {
+    background-color: global.$dark-accent-color;
     color: global.$light-color;
-    padding: 12px 48px;
+    padding: 8px 24px;
     font-weight: bold;
     border: none;
     border-radius: 6px;
     text-transform: capitalize;
 
-    transition: 0.25s ease-out;
-    background-image: global.$accent-gradient;
-    background-position: left;
-    background-size: 200%;
+    // transition: 0.25s ease-out;
+    // background-image: global.$accent-gradient;
+    // background-position: left;
+    // background-size: 200%;
+    
+    font-size: 1rem;
+    font-family: global.$body-typestack;
 }
 
-button:hover {
-    background-position: center;
-    border-radius: 8px;
+input[type=submit]:hover, button:hover {
+    // background-position: center;
+    // border-radius: 8px;
+    cursor: pointer;
 }
 
 table {

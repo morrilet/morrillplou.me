@@ -16,12 +16,12 @@ about: {
             <div id="title-header-text">
                 <div id="title-text-wrapper">
                     <h1 class="title-text inverted">Ethan Morrill-Ploum</h1>
-                    <h1 class="title-subtext title-text inverted">Software Developer</h1>
-                    <h1 class="title-subtext title-text inverted">[
+                    <h1 class="title-subtext inverted">Software Developer</h1>
+                    <h1 class="title-subtext inverted">[
                         {% for obj in social_links %}
                             <div class="social-link-container">
                                 <a class="no-decoration" href="{{ obj.link }}" target="blank">
-                                    <img src="{{ obj.icon }}" alt="{{ obj.alt }}" />
+                                    <img src="{{ obj.white_icon }}" alt="{{ obj.alt }}" />
                                 </a>
                             </div>
                         {% endfor %}

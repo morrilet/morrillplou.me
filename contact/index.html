@@ -2,10 +2,12 @@
 
 <link rel="stylesheet" type="text/css" href="/styles/contact.css"/>
 
-{% block content %}
+{% block content %} 
     <div class="responsive-gutters">
         <div class="nav-section">
             <h1>Contact</h1>
+            <p>I'm always happy to chat! Feel free to reach out either through the contact form below or my various social media links.</p>
+
             <form name="contact" method="POST" data-netlify="true">
                 <label for="email">Email</label><br/>
                 <input id="email" name="email" type="email"/>
@@ -18,12 +20,24 @@
                 <br/>
 
                 <label for="message">Message</label><br/>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" rows="12"></textarea>
 
                 <br/>
 
-                <input type="submit" value="Submit"/>
+                <div id='submit-container'>
+                    <input type="submit" class="inverted" value="Submit"/>
+                    {% include components/generic-social-links %}
+                </div>
             </form>
+            
+            <p id='form-help'>
+                <i>Form not working? Email me directly at <a href="mailto:ethanmorrillploum@gmail.com">ethanmorrillploum@gmail.com</a></i>
+                <b>TODO: Put in footer.</b>
+            </p>
         </div>
     </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="/js/contact-form.js"></script>
 {% endblock %}
