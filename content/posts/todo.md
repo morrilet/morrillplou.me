@@ -35,6 +35,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Lightbox for screenshots in game pages.~~
 * ~~Optional thumbnail image that isn't the banner image.~~
 * ~~Youtube embeds in markdown (would like to embed Line devlog in game page.)~~
+* Fix thumbnail jitter
 
 # Things to learn
 

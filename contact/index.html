@@ -1,10 +1,29 @@
 {% include templates/base-page %}
 
+<link rel="stylesheet" type="text/css" href="/styles/contact.css"/>
+
 {% block content %}
     <div class="responsive-gutters">
         <div class="nav-section">
             <h1>Contact</h1>
-            <p>TODO: Form</p>
+            <form name="contact" method="POST" data-netlify="true">
+                <label for="email">Email</label><br/>
+                <input id="email" name="email" type="email"/>
+
+                <br/>
+
+                <label for="subject">Subject</label><br/>
+                <input id="subject" name="subject" type="text" required/>
+
+                <br/>
+
+                <label for="message">Message</label><br/>
+                <textarea id="message" name="message"></textarea>
+
+                <br/>
+
+                <input type="submit" value="Submit"/>
+            </form>
         </div>
     </div>
 {% endblock %}
