@@ -1,7 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+    console.log('HERE');
+    console.log(document.getElementById('contact-form'));
+
     const submitForm = (e) => {
-        console.log('HERE SUBMIT FORM LISTENER');
+        console.log('SUBMIT FORM LISTENER');
         
         e.preventDefault();
     
@@ -33,6 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
             window.NotificationAPI.notify('Your browser does not support this feature. Please contact me directly using the link below.', false)
         }
     }
-    
-    document.getElementById('contact').addEventListener('submit', submitForm);
+
+    document.getElementById('contact-form').addEventListener('submit', submitForm);
 })
