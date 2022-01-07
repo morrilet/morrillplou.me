@@ -1,4 +1,4 @@
-window.addEventListener('onload', () => {
+window.addEventListener('DOMContentLoaded', () => {
     window.NotificationAPI = {
         notify: (text, successful) => {
             let bannerElement = document.getElementById('notification');

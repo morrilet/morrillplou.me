@@ -1,5 +1,5 @@
-window.addEventListener('onload', () => {
-
+window.addEventListener('DOMContentLoaded', () => {
+    
     const submitForm = (e) => {
         e.preventDefault();
     
