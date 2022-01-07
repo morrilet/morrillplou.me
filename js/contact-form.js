@@ -1,8 +1,10 @@
-window.addEventListener('load', () => {
-    document.getElementById('contact').onsubmit = submitForm;
+window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('contact').addEventListener('submit', submitForm);
 })
 
 const submitForm = (e) => {
+    console.log('HERE SUBMIT FORM LISTENER');
+    
     e.preventDefault();
 
     console.log(e);
@@ -29,7 +31,7 @@ const submitForm = (e) => {
             window.NotificationAPI.notify("Unexpected error! Please contact me directly using the links below.", false);
         })
     } else {
-        // TODO: XMLHttpRequest
+        // TODO: XMLHttpRequest or allow event default
         window.NotificationAPI.notify('Your browser does not support this feature. Please contact me directly using the link below.', false)
     }
 }
