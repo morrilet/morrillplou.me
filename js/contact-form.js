@@ -1,20 +1,20 @@
 window.addEventListener('load', () => {
-    console.log('Loaded contact-form.js!');
-    document.getElementById('contact-form').addEventListener('submit', submitForm);
+    document.getElementById('contact').addEventListener('submit', submitForm);
 })
 
 const submitForm = (e) => {
     e.preventDefault();
 
-    let form = document.getElementById('contact-form');
+    let form = e.currentTarget;
     let formData = new FormData(form);
+    let options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+    }
 
     if (window.fetch) {
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        }).then((success) => {
+        fetch('/contact', options).then((success) => {
             if (success.status == 200) {
                 window.NotificationAPI.notify("Success! Your message has been sent.", true);
             } else {
