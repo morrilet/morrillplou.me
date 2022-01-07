@@ -1,8 +1,8 @@
 @use 'global';
 @use 'base_page'; // TODO Vars, not main.
 
-$header_height: 5.5em;
-$avatar_size: 5.5em;
+$header-height: 5.5em;
+$avatar-size: 5.5em;
 
 header {
     position: fixed;
@@ -13,7 +13,7 @@ header {
 
     #header-content {
         position: relative;
-        height: $header_height;
+        height: $header-height;
         color: global.$light-color;
         background-color: global.$dark-color;
         padding: 12px 40px;
@@ -29,7 +29,7 @@ header {
             bottom: 0;
 
             img {
-                height: $avatar_size;
+                height: $avatar-size;
                 border-radius: 6px;
                 position: absolute;
                 top: 50%;
@@ -44,7 +44,7 @@ header {
             height: 100%;
             font-size: 1.1rem;
             text-align: right;
-            line-height: $header_height;
+            line-height: $header-height;
 
             li {
                 display: inline-block;
@@ -90,5 +90,5 @@ header {
 
 #header-block {
     display: block;
-    height: $header_height;
+    height: $header-height;
 }

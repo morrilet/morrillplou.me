@@ -3,6 +3,8 @@
 @use 'base_page';
 @use 'generic-social-links';
 
+$footer-height: '64px';
+
 input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
@@ -27,6 +29,20 @@ input[type=text], input[type=email], select, textarea {
     }
 }
 
-#form-help {
-    text-align: center;
+.responsive-gutters {
+    display: flex;
+    flex-flow: column;
+    height: calc(100% - #{header.$header-height});
+}
+
+#form-wrapper {
+    flex: 1 1 auto;
+}
+
+#form-help-wrapper {
+    flex: 0 1 $footer-height;
+    
+    #form-help {
+        text-align: center;
+    }
 }
