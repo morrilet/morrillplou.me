@@ -11,7 +11,7 @@ body {
     background-color: global.$light-color;
 }
 
-#{global.$h-tags}, thead tr, p, label {
+#{global.$h-tags}, thead tr, p, label, li {
     color: global.$dark-color;
     font-family: global.$body-typestack;
 

@@ -46,16 +46,20 @@
             </div>
             <!-- <div id="content-wrapper"> -->
                 <div id="description">
-                    <div id='links'>
-                        {% for link_obj in links %}
-                            {% assign key = link_obj.icon | downcase %}
-                            <div class="social-link-container">
-                                <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
-                                    <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
-                                </a>
-                            </div>
-                        {% endfor %}
+                    <div id="download-section">
+                        <!-- <h4>Available on</h4> -->
+                        <div id='links'>
+                            {% for link_obj in links %}
+                                {% assign key = link_obj.icon | downcase %}
+                                <div class="download-link-container">
+                                    <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
+                                        <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
+
                     {{ content }}
                 </div>
             <!-- </div> -->
