@@ -5,16 +5,21 @@ window.addEventListener('load', () => {
 const submitForm = (e) => {
     e.preventDefault();
 
+    console.log(e);
+
     let form = e.currentTarget;
     let formData = new FormData(form);
     let options = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
         body: new URLSearchParams(formData).toString()
     }
 
     if (window.fetch) {
-        fetch('/contact', options).then((success) => {
+        fetch(form.getAttribute('action'), options).then((success) => {
             if (success.status == 200) {
                 window.NotificationAPI.notify("Success! Your message has been sent.", true);
             } else {
