@@ -1,14 +1,7 @@
-window.addEventListener('DOMContentLoaded', () => {
-
-    console.log('HERE');
-    console.log(document.getElementById('contact-form'));
+window.addEventListener('onload', () => {
 
     const submitForm = (e) => {
-        console.log('SUBMIT FORM LISTENER');
-        
         e.preventDefault();
-    
-        console.log(e);
     
         let form = e.currentTarget;
         let formData = new FormData(form);
@@ -25,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
             fetch(form.getAttribute('action'), options).then((success) => {
                 if (success.status == 200) {
                     window.NotificationAPI.notify("Success! Your message has been sent.", true);
+                    form.reset();
                 } else {
                     throw new Error('Request failed');
                 }
