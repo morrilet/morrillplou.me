@@ -10,7 +10,7 @@
     "eleventy": "eleventy --formats=html,js,md,png,jpg,jpeg,svg",
     "watch:eleventy": "eleventy --serve",
     "start": "npm-run-all sass --parallel watch:*",
-    "build": "npm run sass && eleventy"
+    "build": "npm run sass && npm run eleventy"
   },
   "repository": {
     "type": "git",
