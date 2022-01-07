@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    document.getElementById('contact').addEventListener('submit', submitForm);
+    document.getElementById('contact').onsubmit = submitForm;
 })
 
 const submitForm = (e) => {
