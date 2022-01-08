@@ -19,6 +19,10 @@ header {
         padding: 12px 40px;
         box-sizing: border-box;
 
+        @media screen and (max-width: global.$minimum-width) {
+            padding: 12px 6px;
+        }
+
         @include global.for-desktop-up {
             padding: 12px 15%;
         }
@@ -99,7 +103,7 @@ header {
 
         background-color: global.$dark-color;
         width: 100%;
-        height: 64px;
+        height: auto;
 
         border-top: 3px solid global.$dark-accent-color;
         // border-image: global.$accent-gradient 30 stretch;
