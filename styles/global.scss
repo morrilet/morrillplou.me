@@ -16,5 +16,24 @@ $a-tags-hover: "a:active", "a:hover";
 
 $breakpoint-mobile: '480px';
 $breakpoint-tablet: '1024px';
+$minimum-width: 280px;  // As small as we can go before we need to just force horizontal scrolling.
+
+// Brilliant. Didn't know about Sass mixins before this.
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
 
 $vignette-shadow: inset 0 0 100px;

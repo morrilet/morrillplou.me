@@ -17,9 +17,9 @@ the performance was abysmal. I was incredibly proud of the simplicity of the dat
 but I found that to be a huge drain. I had exactly four tables - Players, Events, Matches, and Games. I think you can probably
 guess how these interlock, but for the sake of completeness:
 
-    * Events are made up of Matches.
-    * Matches are made up of Games.
-    * Games have one or more Players, plus a seprate field for the winner.
+* Events are made up of Matches.
+* Matches are made up of Games.
+* Games have one or more Players, plus a seprate field for the winner.
 
 Super simple, right? I just put together a utility class to cleanly gather player win percentages, opponent win percentages, 
 player events, event player counts, and so on. This was incredibly easy to comprehend and I loved how basic it felt, but (as 

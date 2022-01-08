@@ -18,17 +18,19 @@
 
             #title-text-wrapper {
                 position: relative;
-                
-                .title-text {
-                    width: 60%;
-                    margin: 0 20%;
+
+                .title-text, .title-subtext {
+                    
+                    // If not on mobile, use partial width.
+                    @include global.for-tablet-portrait-up {
+                        width: 60%;
+                        margin: 0 20%;
+                    }
+
                     text-align: center;
                 }
 
                 .title-subtext {
-                    width: 60%;
-                    margin: 0 20%;
-                    text-align: center;
                     font-weight: 300;
                 }
 
@@ -75,6 +77,12 @@
             }
 
             #title-text-wrapper::before, #title-text-wrapper::after {
+
+                // If on mobile, don't show this.
+                @include global.for-phone-only {
+                    display: none;
+                }
+
                 position: absolute;
                 width: 20%;
                 top: 50%;
