@@ -19,6 +19,10 @@ header {
         padding: 12px 40px;
         box-sizing: border-box;
 
+        @include global.for-desktop-up {
+            padding: 12px 15%;
+        }
+
         #contact {
             cursor: pointer;
         }
@@ -115,13 +119,12 @@ header {
         }
     }
     
-    #notification {
-        display: none;
-
+    #notification, #notification-nojs {
         width: 100%;
-        background-color: global.$notification-success-color;
+        background-color: global.$light-accent-color;
         text-align: center;
         margin: 0;
+        padding: 6px 0;
 
         p {
             margin-block-start: 0;
@@ -129,6 +132,14 @@ header {
             color: global.$dark-color;
             font-family: global.$body-typestack;
         }
+    }
+
+    #notification {
+        display: none;
+    }
+
+    #notification-nojs {
+        display: block;
     }
 }
 

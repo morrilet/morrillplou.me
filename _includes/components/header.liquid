@@ -23,12 +23,16 @@
         </ul>
     </div>
 
-    <div id="notification">
-        <p id="notification-text">
-            <noscript>
+    <noscript>
+        <div id="notification-nojs">
+            <p id="notification-text">
                 You don't have Javascript enabled! This site may not behave properly without it.
-            </noscript>
-        </p>
+            </p>
+        </div>
+    </noscript>
+    
+    <div id="notification">
+        <p id="notification-text"></p>
     </div>
     
     <script type="text/javascript" src="/js/notification.js"></script>
