@@ -40,6 +40,11 @@ body {
     border-radius: 3px;
 }
 
+#{global.$a-tags-hover}.no-decoration {
+    background-color: transparent;
+    background-image: none;
+}
+
 .responsive-gutters {
     
     // Mobile (size < mobile)

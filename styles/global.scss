@@ -14,8 +14,8 @@ $h-tags: "h1, h2, h3, h4, h5, h6";
 $a-tags: "a, a:active, a:hover, a:visited";
 $a-tags-hover: "a:active", "a:hover";
 
-$breakpoint-mobile: '480px';
-$breakpoint-tablet: '1024px';
+$breakpoint-mobile: '600px';
+$breakpoint-tablet: '1200px';
 $minimum-width: 280px;  // As small as we can go before we need to just force horizontal scrolling.
 
 // Brilliant. Didn't know about Sass mixins before this.

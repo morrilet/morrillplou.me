@@ -121,7 +121,23 @@
             border: 3px solid transparent;
             border-radius: 16px;
             background-clip: padding-box;
-            background-color: global.$light-color;
+            background-color: global.$accent-gradient;
+
+            #label {
+                min-height: 32px;
+                width: 100%;
+                margin: 0;
+                padding: 6px 0;
+                
+                background-color: global.$light-color;
+                border-radius: 16px 16px 0px 0px;
+                text-align: center;
+                font-weight: bold;
+
+                @include global.for-desktop-up {
+                    padding: 0;
+                }
+            }
 
             &:after {
                 content: "";
@@ -145,9 +161,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                position: absolute;
+                position: relative;
                 width: 100%;
                 height: 100%;
+                margin: 8px 0;
 
                 a {
                     display: flex;
