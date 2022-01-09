@@ -36,7 +36,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Optional thumbnail image that isn't the banner image.~~
 * ~~Youtube embeds in markdown (would like to embed Line devlog in game page.)~~
 * ~~Fix thumbnail jitter~~
-* Remove game link (itchio, gamejolt icon) styling on click.
+* ~~Remove game link (itchio, gamejolt icon) styling on click.~~
 
 # Things to learn
 
