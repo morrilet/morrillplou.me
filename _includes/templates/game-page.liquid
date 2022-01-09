@@ -8,7 +8,8 @@
 
         <!-- This should be swapped, maybe. A base page css split into post and portfolio-item would be best. -->
         <link rel="stylesheet" type="text/css" href="/styles/post.css"/>
-        <link rel="stylesheet" type="text/css" href="/styles/game.css"/> <!-- TODO -->
+        <link rel="stylesheet" type="text/css" href="/styles/game.css"/>
+        <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
     </head>
     <body>
         {% include components/header %}
@@ -41,7 +42,7 @@
                     </span>
                 {% endfor %}
                 {% for screenshot in screenshots %}
-                    <img alt="{{ screenshot.alt }}" src="{{ screenshot.src }}"/>
+                    <img alt="{{ screenshot.alt }}" src="{{ screenshot.src }}" class="glightbox" data-glightbox="description: {{ screenshot.alt }}"/>
                 {% endfor %}
             </div>
             <!-- <div id="content-wrapper"> -->
@@ -65,5 +66,6 @@
             <!-- </div> -->
         </div>
     </body>
+    <script type="module" src="/js/glightbox_controller.js"></script>
     <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>
 </html>

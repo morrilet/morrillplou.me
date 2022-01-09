@@ -38,7 +38,7 @@ module.exports = (function(eleventyConfig) {
     // Config
     eleventyConfig.addPassthroughCopy('_includes/styles');
     eleventyConfig.addPassthroughCopy('_includes/images');
-    eleventyConfig.addPassthroughCopy({'node_modules/glightbox/dist': 'bin/glightbox/'})
+    eleventyConfig.addPassthroughCopy({'node_modules/glightbox/dist': 'bin/glightbox/'});
     eleventyConfig.addPassthroughCopy('icons');
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addShortcode('excerpt', (post) => getExcerpt(post))
@@ -54,6 +54,7 @@ module.exports = (function(eleventyConfig) {
         modifyToken: (token, env) => {
             if (token.type == 'image') {
                 token.attrObj.class = 'glightbox';
+                token.attrObj['data-glightbox'] = `description: ${token.content}`;
             }
         }
     }).use(markdownModifyToken)

@@ -13,7 +13,7 @@ body {
     background-color: global.$light-color;
 }
 
-#{global.$h-tags}, thead tr, p, label, li {
+#{global.$h-tags}, thead tr, p, label, li, .gslide-desc {
     color: global.$dark-color;
     font-family: global.$body-typestack;
 
@@ -134,4 +134,21 @@ table {
 
 ul li {
     list-style: symbols('-');
+}
+
+img.glightbox {
+    cursor: pointer;
+}
+
+.glightbox-clean .gslide-description {
+    background-color: global.$light-color;
+
+    .gdesc-inner {
+        font-size: 1.25em;  // Same as content
+        padding: 24px 12px;
+
+        .gslide-desc {
+            text-align: center;
+        }
+    }
 }

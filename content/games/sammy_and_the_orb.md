@@ -6,11 +6,11 @@ date: 2020-10-05
 screenshots: [
     {alt: "The cover image of Sammy and the Orb.", src: "/images/games/sammy_and_the_orb/Sammy_Boxart_Title.png"},
     {alt: "The controls menu.", src: "/images/games/sammy_and_the_orb/Sammy_Boxart_Controls.jpg"},
-    {alt: "Platforms appearing in Sammy and the Orb.", src: "/images/games/sammy_and_the_orb/Screenshot_1.png"},
-    {alt: "Sammy pushing a box onto a button.", src: "/images/games/sammy_and_the_orb/Screenshot_2.png"},
-    {alt: "Sammy looking at a box.", src: "/images/games/sammy_and_the_orb/Screenshot_3.png"},
-    {alt: "Sammy performing an emote.", src: "/images/games/sammy_and_the_orb/Screenshot_4.png"},
-    {alt: "Sammy standing in front of a broken vat of acid.", src: "/images/games/sammy_and_the_orb/Screenshot_5.png"},
+    {alt: "Sammy looking at a box.", src: "/images/games/sammy_and_the_orb/Screenshot_1.png"},
+    {alt: "Sammy standing in front of a broken vat of acid.", src: "/images/games/sammy_and_the_orb/Screenshot_2.png"},
+    {alt: "Sammy pushing a box onto a button.", src: "/images/games/sammy_and_the_orb/Screenshot_3.png"},
+    {alt: "Platforms appearing in Sammy and the Orb.", src: "/images/games/sammy_and_the_orb/Screenshot_4.png"},
+    {alt: "Sammy performing an emote.", src: "/images/games/sammy_and_the_orb/Screenshot_5.png"},
 ]
 links: [
     {icon: "ItchIO", href: "https://morrilet.itch.io/sammy-and-the-orb"},

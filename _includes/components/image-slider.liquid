@@ -1,7 +1,7 @@
 <div class='image-slider'>
     {%- for image in images -%}
         <div class="image-slider-container">
-            <a href="{{ image.src }}" class='glightbox'>
+            <a href="{{ image.src }}" class='glightbox' data-glightbox="description: {{ image.alt }}">
                 {%- if image.thumbnail -%}
                     <img alt="{{ image.alt }}" src="{{ image.thumbnail }}"/>
                 {%- else -%}
