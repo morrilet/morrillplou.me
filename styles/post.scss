@@ -26,5 +26,9 @@
         margin-right: 10%;
         margin-left: 10%;
         width: 80%;
+
+        &.glightbox {
+            cursor: pointer;
+        }
     }
 }

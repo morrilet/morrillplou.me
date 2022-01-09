@@ -16,7 +16,6 @@ const months = [
     'December'
 ]
 
-
 /**
  * Attempts to get an excerpt from a post object. The excerpt is the content between before the first 
  * instance of '<!-- more -->' or the excerpt listed in front-matter, based on availability.
@@ -34,7 +33,6 @@ const getExcerpt = (post) => {
     return null
 }
 
-
 module.exports = (function(eleventyConfig) {
 
     // Config
@@ -48,6 +46,17 @@ module.exports = (function(eleventyConfig) {
         excerpt: true,
         excerpt_separator: "<!-- more -->"
     })
+
+    // Modify the default image handling in markdown to inject our own class attributes.
+    let markdownModifyToken = require('markdown-it-modify-token')
+    let markdownLibrary = markdownIt({
+        modifyToken: (token, env) => {
+            if (token.type == 'image') {
+                token.attrObj.class = 'glightbox';
+            }
+        }
+    }).use(markdownModifyToken)
+    eleventyConfig.setLibrary("md", markdownLibrary);
 
     // Plugins
     eleventyConfig.addPlugin(syntaxHighlighter);
