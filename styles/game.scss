@@ -35,7 +35,6 @@
     }
 }
 
-
 // Desktops...
 @media only screen and (min-width: global.$breakpoint-tablet) {
     #content {
@@ -160,19 +159,31 @@
             #links {
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: stretch;
                 position: relative;
                 width: 100%;
                 height: 100%;
-                margin: 8px 0;
+                box-sizing: border-box;
 
-                a {
-                    display: flex;
-                    align-items: center;
+                .download-link-container {
+                    display: block;
+                    position: relative;
+                    top: 0;
+                    bottom: 0;
 
-                    img {
-                        height: auto;
-                        max-width: 8rem;
+                    a {
+                        height: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        padding: 8px 0;
+                        text-align: center;
+    
+                        img {
+                            display: block;
+                            max-width: 8rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                     }
                 }
             }
