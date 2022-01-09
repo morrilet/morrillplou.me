@@ -50,6 +50,7 @@ module.exports = (function(eleventyConfig) {
     // Modify the default image handling in markdown to inject our own class attributes.
     let markdownModifyToken = require('markdown-it-modify-token')
     let markdownLibrary = markdownIt({
+        html: true,
         modifyToken: (token, env) => {
             if (token.type == 'image') {
                 token.attrObj.class = 'glightbox';
