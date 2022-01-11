@@ -3,7 +3,11 @@
 $title_image_desaturation: 80%;
 
 #title-wrapper {
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 300px;
     position: relative;
     background-color: global.$dark-color;
 
@@ -25,8 +29,6 @@ $title_image_desaturation: 80%;
     #title-header {
         position: relative;
         padding: 12px;
-        top: 50%;
-        transform: translateY(-50%);
         text-shadow: 2px 2px black;
         text-align: center;
 

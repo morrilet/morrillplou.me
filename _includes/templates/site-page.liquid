@@ -4,11 +4,11 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
 
-        <title>Games | {{ title }}</title>
+        <title>Sites | {{ title }}</title>
 
         <!-- This should be swapped, maybe. A base page css split into post and portfolio-item would be best. -->
         <link rel="stylesheet" type="text/css" href="/styles/post.css"/>
-        <link rel="stylesheet" type="text/css" href="/styles/game.css"/>
+        <link rel="stylesheet" type="text/css" href="/styles/site.css"/>
         <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
     </head>
     <body>
@@ -48,16 +48,10 @@
             <!-- <div id="content-wrapper"> -->
                 <div id="description">
                     <div id="download-section">
-                        <p id="label">Download:</p>
-                        <div id='links'>
-                            {% for link_obj in links %}
-                                {% assign key = link_obj.icon | downcase %}
-                                <div class="download-link-container">
-                                    <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
-                                        <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
-                                    </a>
-                                </div>
-                            {% endfor %}
+                        <div class="link-container">
+                            <a class="no-decoration" href="{{ live_url }}" target="blank">
+                                <p id='label'>View Live Site</p>
+                            </a>
                         </div>
                     </div>
 

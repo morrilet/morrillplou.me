@@ -42,6 +42,11 @@ header {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+
+                transition: 0.25s ease-out;
+                &:hover {
+                    transform: translateY(-50%) scale(1.1);
+                }
             }
         }
 
@@ -72,6 +77,11 @@ header {
 
             button {
                 font-size: 1.1rem;
+                transition: 0.25s ease-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
 

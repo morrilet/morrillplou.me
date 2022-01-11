@@ -57,7 +57,7 @@ about: {
         } %}
         
         <!-- Site Previews -->
-        {% assign latest_sites = collections.sites %}
+        {% assign latest_sites = collections.sites | reverse | slice: 0, 3 %}
         {% include components/nav-section with {
             title: sites_nav_section.title
             description: sites_nav_section.description
