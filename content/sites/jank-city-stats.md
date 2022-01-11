@@ -1,7 +1,7 @@
 ---
 title: Jank City Stats
 image: '/images/sites/jankcitystats/jc_home.jpg'
-thumbnail: '/images/sites/jankcitystats/Thumbnail.png'
+thumbnail: '/images/sites/jankcitystats/MobileMockup_Dark.png'
 date: 2019-04-19
 screenshots: [
     {alt: "A mockup of the site on desktop displays.", src: "/images/sites/jankcitystats/DesktopMockup_Dark.png"},
