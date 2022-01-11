@@ -3,9 +3,16 @@
 {% block content %}
     <div class="responsive-gutters">
         <div class="nav-section">
-            <h1>Games</h1>
+            <h1><a name='games' class='anchor-only'>Games</a></h1>
             {%- for game in collections.games %}
                 {% include components/nav-entry with { item: game } %}
+            {%- endfor %}
+        </div>
+
+        <div class="nav-section">
+            <h1><a name='sites' class='anchor-only'>Sites</a></h1>
+            {%- for site in collections.sites %}
+                {% include components/nav-entry with { item: site } %}
             {%- endfor %}
         </div>
     </div>

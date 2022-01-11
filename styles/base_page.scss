@@ -23,17 +23,19 @@ body {
 }
 
 #{global.$a-tags} {
-    color: global.$dark-accent-color;
-    font-family: global.$body-typestack;
-    font-weight: bold;
-    text-decoration: none;
-
+    &:not(.anchor-only) {
+        color: global.$dark-accent-color;
+        font-family: global.$body-typestack;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
     &:not(.no-decoration) {
         padding: 2px;
     }
 }
 
-#{global.$a-tags-hover}:not(.no-decoration) {
+#{global.$a-tags-hover}:not(.no-decoration):not(.anchor-only) {
     color: global.$light-color;
     background-color: global.$dark-color;
     background-image: global.$accent-gradient;
@@ -43,6 +45,10 @@ body {
 #{global.$a-tags-hover}.no-decoration {
     background-color: transparent;
     background-image: none;
+}
+
+.anchor-only {
+    pointer-events: none;
 }
 
 .responsive-gutters {
