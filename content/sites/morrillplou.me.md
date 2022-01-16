@@ -11,7 +11,7 @@ live_url: '/?selfReferral=true'
 excerpt: A portfolio website built with the JAMStack in mind.
 ---
 
-A portfolio site build using [11ty](https://www.11ty.dev/). By the time I started building my new portfolio site I had seen enough
+A portfolio site built using [11ty](https://www.11ty.dev/). By the time I started building my new portfolio site I had seen enough
 of the dynamic content world to know that's not what I wanted (or needed). My site is ultimately pretty simple - just some portfolio pages and 
 blog posts. There's a lot of content here, but nothing that requires dynamic data or a database connection. Instead, I opted to get some practice
 using the [JAMStack](https://jamstack.org/). I really like this approach, and I think for small sites like this it's my preferred way
