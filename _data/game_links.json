@@ -6,5 +6,13 @@
     "itchio": {
         "src": "/icons/itch.io/logos/itchio-logo-black.png",
         "alt": "itch.io"
+    },
+    "steam": {
+        "src": "/icons/steam.png",
+        "alt": "Steam"
+    },
+    "playstation": {
+        "src": "/icons/PlayStation_Store_(Print).svg",
+        "alt": "PlayStation Store"
     }
 }

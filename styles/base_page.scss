@@ -7,6 +7,7 @@ html, body {
     margin: 0;
 
     min-width: global.$minimum-width;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -152,14 +153,16 @@ img.glightbox {
 }
 
 .glightbox-clean .gslide-description {
-    background-color: global.$light-color;
 
     .gdesc-inner {
         font-size: 1.25em;  // Same as content
         padding: 24px 12px;
+        background-color: global.$light-color;
 
         .gslide-desc {
             text-align: center;
+            color: global.$dark-color;
+            font-family: global.$body-typestack;
         }
     }
 }

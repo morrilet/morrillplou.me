@@ -18,7 +18,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Remove gradient from blog post title.~~
 * ~~Media queries for gutter size~~
 * ~~Blog post preview text from the home page~~
-* Image captions - why only working on single images? Did we hide this from the gallery view for some reason?
+* ~~Image captions - why only working on single images? Did we hide this from the gallery view for some reason?~~
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
 * Ignore directory for drafts
 * ~~Product pages (games, sites, etc.)~~
@@ -38,6 +38,8 @@ image: '/images/post_it_notes.jpg'
 * ~~Fix thumbnail jitter~~
 * ~~Remove game link (itchio, gamejolt icon) styling on click.~~
 * ~~Fix long blog title overflow on mobile devices~~
+* ~~Alt text for HD:DDay images~~
+* Footer space
 
 # Things to learn
 
