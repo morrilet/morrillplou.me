@@ -15,6 +15,9 @@ links: [
 videos: [
     "https://www.youtube.com/embed/GAyjx6duask"
 ]
+innerTags: [
+    "freelance"
+]
 excerpt: A multiplayer VR title about flying (and sometimes fighting) RC airplanes. This was the first game I worked on for Strange Games Studios.
 ---
 

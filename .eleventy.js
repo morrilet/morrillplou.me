@@ -69,6 +69,7 @@ module.exports = (function(eleventyConfig) {
         return str.length;
     })
     eleventyConfig.addFilter('toUTCString', (str) => {
+        console.log(str);
         var date = new Date(str);
 
         var day = date.getUTCDate();
@@ -77,5 +78,8 @@ module.exports = (function(eleventyConfig) {
         var year = fullYear.slice(fullYear.length - 2);
 
         return day + " " + month + " '" + year;
+    })
+    eleventyConfig.addFilter('lowercase', (str) => {
+        return str.toLowerCase();
     })
 });

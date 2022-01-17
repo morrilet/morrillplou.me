@@ -17,13 +17,16 @@ links: [
 videos: [
     "https://www.youtube.com/embed/HamUzC_9vMY"
 ]
+innerTags: [
+    "freelance"
+]
 excerpt: A WWII multiplayer shooter released on PSVR. This was the second game I worked on for Strange Games Studios.
 ---
 
 ## About the Game
 
 Honor and Duty: D-Day is an online PVP shooter set during the D-Day landing in World War II. Players compete in Team Death Match, Domination, and Free For All matches or in a separate Battle Royale 
-mode. Online games feature 16 v 16 matches (32 player FFA/BR) in a fast paced environment Players can drive tanks and jeeps across large maps in search of the enemy. Players rank up to unlock access 
+mode. Online games feature 16 v 16 matches (32 player FFA/BR) in a fast paced environment. Players can drive tanks and jeeps across large maps in search of the enemy. Players rank up to unlock access 
 to all 4 player classes which each have different abilities.
 
 Players can choose their class, character, and weapons from 4 classes, 4 player characters, and a number of weapons including machine guns, rifles, shotguns, a rocket launcher, and a flame thrower.

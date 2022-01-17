@@ -14,22 +14,13 @@
     <body>
         {% include components/header %}
 
-        <div id="title-wrapper">
-            <div id="title-image" style="background-image:url('{{ image }}')"></div>
-            <div id="title-header">
-                <h1 id="title-header-text">{{ title }}</h1>
-                <p id="title-header-date-posted">
-                    <i class="fas fa-upload"></i>
-                    {{ page.date | toUTCString }}
-                </p>
-                {% if date_modified %}
-                    <p id="title-header-date-updated">
-                        <i class="fas fa-pencil-alt"></i>
-                        {{ date_modified | toUTCString }}
-                    </p>
-                {% endif %}
-            </div>
-        </div>
+        {% include components/title-banner with { 
+            title: {{ title }},
+            image: {{ image }},
+            page: {{ page }},
+            date_modified: {{ date_modified }}
+        } %}
+        
         <div id='content' class='responsive-gutters responsive-line-height'>
             <div id='screenshots' class=''>
                 {% for video_url in videos %}

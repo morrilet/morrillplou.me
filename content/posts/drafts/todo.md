@@ -20,14 +20,14 @@ image: '/images/post_it_notes.jpg'
 * ~~Blog post preview text from the home page~~
 * ~~Image captions - why only working on single images? Did we hide this from the gallery view for some reason?~~
 * ~~[Typography.js](https://kyleamathews.github.io/typography.js/) for the type-stack.~~ Not gonna work. Went with a traditional stack.
-* Ignore directory for drafts
+* ~~Ignore directory for drafts~~
 * ~~Product pages (games, sites, etc.)~~
 * ~~Overview sections~~
 * Download fonts and link them using @font-face so they actually render properly on the site.
 * ~~Table styling in blog posts.~~
 * Related tags to show portfolio / blog entries on each other's pages if related. (ie. MemErr Postmortem linked in MemErr game page.)
 * ~~Contact pop-up.~~ -> Went with a form.
-* Split games into jam / long-form / professional
+* ~~Split games into jam / long-form / professional~~ -> Done via tags for now.
 * Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)
 * ~~Fix typography differences in lists vs paragraphs~~
 * ~~Center images in thumbnails.~~
