@@ -1,5 +1,11 @@
 <div id="title-wrapper">
-    <div id="title-image" style="background-image:url('{{ image }}')"></div>
+
+    {% if image_position %}
+        <div id="title-image" style="background-image:url('{{ image }}'); background-position:{{ image_position }};"></div>
+    {% else %}
+        <div id="title-image" style="background-image:url('{{ image }}');"></div>
+    {% endif %}
+
     <div id="title-header-wrapper">
         <div id="title-header">
             <h1 id="title-header-text">{{ title }}</h1>
@@ -15,4 +21,5 @@
             {% endif %}
         </div>
     </div>
+
 </div>

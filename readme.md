@@ -28,6 +28,10 @@ some common tasks:
     * Add the `title` front-matter tag.
 * Banner Images
     * Add the `image` front-matter tag.
+    * Add the `image_position` front-matter tag to specify the `background-position` of the banner image.
+* Thumbnails
+    * Add the `thumbnail` front-matter tag.
+    * Add the `thumbnail_position` front-matter tag to specify the `object-position` of the thumbnail image.
 * Date Overrides
     * Add the `date` front-matter tag to override the default file (post) creation date.
     * Add the `date_modified` front-matter tag to specify an edit date (shown alongside the post creation date.)

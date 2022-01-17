@@ -39,15 +39,14 @@
 
             li {
                 align-self: center;
+                
                 text-decoration: underline;
                 text-decoration-thickness: 1px;
                 text-decoration-color: global.$dark-accent-color;
+                
                 margin: 0 2px;
                 font-weight: lighter;
                 font-style: italic;
-                // border: 2px solid global.$dark-accent-color;
-                // border-radius: 8px;
-                // background-color: global.$notification-success-color;
 
                 &::before {
                     content: '#'

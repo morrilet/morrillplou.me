@@ -1,7 +1,14 @@
 <div class="thumbnail">
+    {% assign objectPosition = 'center' %}
+    {% if position %}
+        {% assign objectPosition = position %}
+    {% endif %}
+
     {% if image %}
         {% if url %}
-            <a href={{ url }}><img class="thumbnail-img" src={{ image }}></a>
+            <a href={{ url }}>
+                <img class="thumbnail-img" style="object-position:{{ objectPosition }};" src={{ image }}>
+            </a>
         {% else %}
             <img class="thumbnail-img" src={{ image }}>
         {% endif %}

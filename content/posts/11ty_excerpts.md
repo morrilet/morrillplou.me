@@ -1,6 +1,7 @@
 ---
 title: 11ty Excerpts and You
 image: "/images/posts/11ty_excerpts/11ty_code_possum.png"
+thumbnail_position: 'left'
 ---
 
 So you've got some **Really Radical Content**(tm) and you want to show a bit of ankle in 11ty. That's all fine and dandy but it turns out that this can

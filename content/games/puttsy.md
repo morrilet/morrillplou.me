@@ -1,6 +1,7 @@
 ---
 title: Puttsy
 image: '/images/games/puttsy/puttsy_banner.png'
+image_position: 'bottom'
 thumbnail: '/images/games/puttsy/puttsy_thumbnail.png'
 date: 2018-04-24
 videos: [

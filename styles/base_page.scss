@@ -14,6 +14,10 @@ body {
     background-color: global.$light-color;
 }
 
+#content {
+    padding-bottom: global.$footer-padding;
+}
+
 #{global.$h-tags}, thead tr, p, label, li, .gslide-desc {
     color: global.$dark-color;
     font-family: global.$body-typestack;

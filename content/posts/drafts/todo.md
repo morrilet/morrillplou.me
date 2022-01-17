@@ -28,7 +28,7 @@ image: '/images/post_it_notes.jpg'
 * Related tags to show portfolio / blog entries on each other's pages if related. (ie. MemErr Postmortem linked in MemErr game page.)
 * ~~Contact pop-up.~~ -> Went with a form.
 * ~~Split games into jam / long-form / professional~~ -> Done via tags for now.
-* Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)
+* ~~Banner image variable anchoring (SYTYCS would be best to anchor to top, Mothership best to keep centered, etc.)~~
 * ~~Fix typography differences in lists vs paragraphs~~
 * ~~Center images in thumbnails.~~
 * Add dates to nav entries where available
@@ -39,7 +39,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Remove game link (itchio, gamejolt icon) styling on click.~~
 * ~~Fix long blog title overflow on mobile devices~~
 * ~~Alt text for HD:DDay images~~
-* Footer space
+* ~~Footer space~~
 
 # Things to learn
 

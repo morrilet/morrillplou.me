@@ -48,10 +48,12 @@ $title_image_desaturation: 40%;
             h1 {
                 font-size: 3em;
                 color: global.$light-color;
+                margin: 0;
             }
             
             p {
-                color: global.$light-color
+                color: global.$light-color;
+                margin: 4px 0;
             }
         }
     }
