@@ -2,6 +2,7 @@
 title: "Streaming Video Over LAN with FFMPEG"
 image: "/images/posts/video_over_lan_ffmpeg/banner.png"
 date: 2019-03-04
+date_modified: 2022-01-17
 ---
 
 I’ve been offline for a while and I figured it’s probably time to check back in with something completely different. This may not be my usual shtick, but I’m super happy I had the opportunity to do this, and I wanted to share a bit about it. Without further ado, this is “Streaming Video Over LAN with FFMPEG”. (Alternatively, “Spying on Your Friends.”)
@@ -121,7 +122,7 @@ And that should do it! The stream is now capturing audio and video, as well as s
 
 There’s one last thing we need to do, though, and it’s possibly the second most critical part of this whole setup.
 
-# Viewing the Stream
+# Viewing the Stream (Updated, see P.P.S.)
 With the stream set up, we now need to view the it on the receiving computer. This can theoretically be done in a number of ways, but I used FFPLAY. Head on over to the receiving computer and run this command:
 
 ``` bash
@@ -148,3 +149,9 @@ I had a blast setting this up, and the end result was totally worth it. We had s
 If you have any comments or concerns feel free to post them down below. I’d love to hear about why everything I’ve said is wrong.
 
 **P.S.** After I’d finished this whole adventure, I learned something interesting about saving to an .mp4 file. Apparently, the header data for an MP4 is saved to the end of the file. This means that if your stream is interrupted unexpectedly you may not write this data and you won’t be able to view the file’s contents, despite them still technically being there. A fix for this is to use MKV files for your saved stream data. These apparently write their headers throughout the file so if the stream cuts out unexpectedly you can still salvage the recorded file.
+
+**P.P.S. (12/28/2021)** A reader reached out asking about whether or not there’s any way to improve the latency here, and I’m happy to report that I’ve found a way to bring it down to ~1s. I’ll leave the explanation to this StackOverflow post (it’s pretty in-depth) but here’s the updated command for the receiving PC:
+
+```bash
+ffplay -fflags nobuffer -flags low_delay -framedrop udp://192.168.2.62:8090
+```
