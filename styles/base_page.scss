@@ -152,11 +152,21 @@ ul li {
     list-style: symbols('-');
 }
 
+// Prevent glightbox from resetting scroll on mobile devices.
+.glightbox-open {
+    height: auto;
+}
+
 img.glightbox {
     cursor: pointer;
 }
 
 .glightbox-clean .gslide-description {
+    padding: 19px 0 0 0 !important;
+
+    @include global.for-tablet-landscape-up {
+        padding: 0 !important;
+    }
 
     .gdesc-inner {
         font-size: 1.25em;  // Same as content
