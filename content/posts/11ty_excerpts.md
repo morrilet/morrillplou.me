@@ -1,6 +1,7 @@
 ---
 title: 11ty Excerpts and You
 image: "/images/posts/11ty_excerpts/11ty_code_possum.png"
+date: 2020-06-17
 thumbnail_position: 'left'
 ---
 
