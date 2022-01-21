@@ -1,0 +1,48 @@
+@use 'global';
+@use 'header';
+@use 'base_page';
+@use 'generic-social-links';
+
+$footer-height: '64px';
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#submit-container {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 15em;
+    max-width: 100%;
+
+    input[type=submit] {
+        width: 15em;
+        max-width: 100%;
+    }
+}
+
+.responsive-gutters {
+    display: flex;
+    flex-flow: column;
+    height: calc(100% - #{header.$header-height});
+}
+
+#form-wrapper {
+    flex: 1 1 auto;
+}
+
+#form-help-wrapper {
+    flex: 0 1 $footer-height;
+    
+    #form-help {
+        text-align: center;
+    }
+}

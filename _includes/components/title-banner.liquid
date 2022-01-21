@@ -1,0 +1,25 @@
+<div id="title-wrapper">
+
+    {% if image_position %}
+        <div id="title-image" style="background-image:url('{{ image }}'); background-position:{{ image_position }};"></div>
+    {% else %}
+        <div id="title-image" style="background-image:url('{{ image }}');"></div>
+    {% endif %}
+
+    <div id="title-header-wrapper">
+        <div id="title-header">
+            <h1 id="title-header-text">{{ title }}</h1>
+            <p id="title-header-date-posted">
+                <i class="fas fa-upload"></i>
+                {{ page.date | toUTCString }}
+            </p>
+            {% if date_modified %}
+                <p id="title-header-date-updated">
+                    <i class="fas fa-pencil-alt"></i>
+                    {{ date_modified | toUTCString }}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+
+</div>

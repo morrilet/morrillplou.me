@@ -1,0 +1,11 @@
+<div class="social-links">
+    {% for obj in social_links %}
+        {% if obj.is_generic %}
+            <div class="social-link-container">
+                <a class="no-decoration" href="{{ obj.link }}" target="blank">
+                    <img src="{{ obj.icon }}" alt="{{ obj.alt }}" />
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,30 @@
+// Using content here to compete with other styles that have an ID in their definition.
+#content {
+    .image-slider {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        
+        .image-slider-container {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 16rem;
+            margin: 16px 8px 16px 8px;
+
+
+            a {
+                background-color: transparent;
+                background-image: none;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 0 !important;
+            }
+        }
+    }
+}

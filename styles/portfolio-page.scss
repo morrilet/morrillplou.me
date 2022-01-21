@@ -1,0 +1,123 @@
+@use 'global';
+@use 'base_page';
+@use 'header';
+@use 'image-slider';
+@use 'desaturated-header';
+
+// Tablet devices and smaller...
+@media only screen and (max-width: global.$breakpoint-tablet) {
+    #content {
+        #description {
+            width: 100%;
+            order: 2;
+        }
+
+        #screenshots {
+            order: 1;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            width: 100%;
+            
+            img {
+                max-width: 16rem;
+                margin: 16px 8px 16px 8px;
+            }
+            
+            .video-container {
+                margin: 16px 8px 16px 8px;
+
+                iframe {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Desktops...
+@media only screen and (min-width: global.$breakpoint-tablet) {
+    #content {
+        #description {
+            margin-top: 8px !important;
+            width: 60%;
+            order: 1;
+        }
+
+        #screenshots {
+            width: 40%;
+            padding: 8px 16px 8px 16px;
+            box-sizing: border-box;
+            order: 2;
+            
+            img, .video-container {
+                width: 100%;
+                margin: 0;
+            }
+            
+            .video-container {
+                display: inline-block;
+                position: relative;
+                height: 0;
+                padding-bottom: 56.25%;  // 16:9 aspect ratio.
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    margin-top: 2rem;
+
+    h1:before {
+        content: '#';
+        padding-right: 0.75em;
+        color: global.$dark-accent-color;
+    }
+    
+    pre {
+        box-sizing: border-box;
+    }
+    
+    #description {
+        margin-top: 32px;
+
+        #download-section {
+            height: auto;
+            min-height: 48px;
+            width: 100%;
+            text-align: left;
+
+            position: relative;
+            border: 3px solid transparent;
+            border-radius: 16px;
+            background-clip: padding-box;
+            background-color: global.$accent-gradient;
+
+            &:after {
+                content: "";
+                z-index: -1;
+                position: absolute;
+                top: -3px;
+                bottom: -3px;
+                right: -3px;
+                left: -3px;
+                border-radius: 16px;
+                background: global.$accent-gradient;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use 'global';
+
+.thumbnail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 6px;
+    background-color: global.$dark-color;
+    pointer-events: none;
+
+    a {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            padding: 0;
+            background-image: none;
+        }
+    }
+
+    .thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        pointer-events: initial;
+        transition: 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1)
+        }
+    }
+}

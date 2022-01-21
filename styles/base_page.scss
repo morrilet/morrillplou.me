@@ -1,0 +1,185 @@
+@use 'global';
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    min-width: global.$minimum-width;
+
+    @include global.for-desktop-up {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    background-color: global.$light-color;
+}
+
+#content {
+    padding-bottom: global.$footer-padding;
+}
+
+#{global.$h-tags}, thead tr, p, label, li, .gslide-desc {
+    color: global.$dark-color;
+    font-family: global.$body-typestack;
+
+    &.inverted {
+        color: global.$light-color;
+    }
+}
+
+#{global.$a-tags} {
+    &:not(.anchor-only) {
+        color: global.$dark-accent-color;
+        font-family: global.$body-typestack;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    &:not(.no-decoration) {
+        padding: 2px;
+    }
+}
+
+#{global.$a-tags-hover}:not(.no-decoration):not(.anchor-only) {
+    color: global.$light-color;
+    background-color: global.$dark-color;
+    background-image: global.$accent-gradient;
+    border-radius: 3px;
+}
+
+#{global.$a-tags-hover}.no-decoration {
+    background-color: transparent;
+    background-image: none;
+}
+
+.anchor-only {
+    pointer-events: none;
+}
+
+.responsive-gutters {
+    
+    // Mobile (size < mobile)
+    @media only screen and (max-width: global.$breakpoint-mobile) {
+        padding: 0 5%;
+    }
+
+    // Tablets (mobile < size < tablet)
+    @media only screen and (min-width: global.$breakpoint-mobile) and (max-width: global.$breakpoint-tablet) {
+        padding: 0 10%;
+    }
+
+    // Desktop (tablet < size)
+    @media only screen and (min-width: global.$breakpoint-tablet) {
+        padding: 0 20%;
+    }
+}
+
+p, .responsive-line-height {
+
+    &:not(.no-responsive-line-height) {
+        // Mobile (size < mobile)
+        @media only screen and (max-width: global.$breakpoint-mobile) {
+            line-height: normal;
+        }
+
+        // Tablets (mobile < size < tablet)
+        @media only screen and (min-width: global.$breakpoint-mobile) and (max-width: global.$breakpoint-tablet) {
+            line-height: 1.5em;
+        }
+
+        // Desktop (tablet < size)
+        @media only screen and (min-width: global.$breakpoint-tablet) {
+            line-height: 2.0em;
+        }
+    }
+}
+
+input[type=submit], button {
+    background-color: global.$dark-accent-color;
+    color: global.$light-color;
+    padding: 8px 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-transform: capitalize;
+
+    // transition: 0.25s ease-out;
+    // background-image: global.$accent-gradient;
+    // background-position: left;
+    // background-size: 200%;
+    
+    font-size: 1rem;
+    font-family: global.$body-typestack;
+}
+
+input[type=submit]:hover, button:hover {
+    // background-position: center;
+    // border-radius: 8px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    * > tr > td {
+        padding: 0.5rem;
+    }
+
+    thead {
+        tr {
+            border-bottom: 1px solid global.$dark-color;
+        }
+        
+        * {
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    tbody {
+        td {
+            border-bottom: 1px dotted global.$dark-color;
+        }
+
+        tr:first-child td {
+            padding-top: 0.75rem;
+        }
+    }
+}
+
+ul li {
+    list-style: symbols('-');
+}
+
+// Prevent glightbox from resetting scroll on mobile devices.
+.glightbox-open {
+    height: auto;
+}
+
+img.glightbox {
+    cursor: pointer;
+}
+
+.glightbox-clean .gslide-description {
+    padding: 19px 0 0 0 !important;
+
+    @include global.for-tablet-landscape-up {
+        padding: 0 !important;
+    }
+
+    .gdesc-inner {
+        font-size: 1.25em;  // Same as content
+        padding: 24px 12px;
+        background-color: global.$light-color;
+
+        .gslide-desc {
+            text-align: center;
+            color: global.$dark-color;
+            font-family: global.$body-typestack;
+        }
+    }
+}

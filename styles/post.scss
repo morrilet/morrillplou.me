@@ -1,0 +1,30 @@
+@use 'global';
+@use 'base_page';
+@use 'header';
+@use 'image-slider';
+@use 'video-embed';
+@use 'desaturated-header';
+
+#content {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    margin-top: 2rem;
+
+    h1:before {
+        content: '#';
+        padding-right: 0.75em;
+        color: global.$dark-accent-color;
+    }
+
+    pre {
+        box-sizing: border-box;
+    }
+
+    img {
+        position: relative;
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+        <title>Games | {{ title }}</title>
+
+        <!-- This should be swapped, maybe. A base page css split into post and portfolio-item would be best. -->
+        <link rel="stylesheet" type="text/css" href="/styles/post.css"/>
+        <link rel="stylesheet" type="text/css" href="/styles/game.css"/>
+        <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
+    </head>
+    <body>
+        {% include components/header %}
+
+        {% include components/title-banner with { 
+            title: {{ title }},
+            image: {{ image }},
+            page: {{ page }},
+            image_position: {{ image_position }},
+            date_modified: {{ date_modified }}
+        } %}
+        <div id='content' class='responsive-gutters responsive-line-height'>
+            <div id='screenshots' class=''>
+                {% for video_url in videos %}
+                    <span class="video-container">
+                        <iframe src="{{ video_url }}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </span>
+                {% endfor %}
+                {% for screenshot in screenshots %}
+                    <img alt="{{ screenshot.alt }}" src="{{ screenshot.src }}" class="glightbox" data-glightbox="description: {{ screenshot.alt }}"/>
+                {% endfor %}
+            </div>
+            <!-- <div id="content-wrapper"> -->
+                <div id="description">
+                    <div id="download-section">
+                        <p id="label">Download:</p>
+                        <div id='links'>
+                            {% for link_obj in links %}
+                                {% assign key = link_obj.icon | downcase %}
+                                <div class="download-link-container">
+                                    <a class="no-decoration" href="{{ link_obj.href }}" target="blank">
+                                        <img src="{{ game_links[key].src }}" alt="{{ game_links[key].alt }}" />
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {{ content }}
+                </div>
+            <!-- </div> -->
+        </div>
+    </body>
+    <script type="module" src="/js/glightbox_controller.js"></script>
+    <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>
+</html>

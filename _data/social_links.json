@@ -1,0 +1,26 @@
+[
+    {
+        "white_icon": "/icons/Twitter_Social_Icon_Rounded_Square_White.svg",
+        "accent_icon": "/icons/Twitter_Social_Icon_Rounded_Square_AccentColor.svg",
+        "icon": "/icons/Twitter_Social_Icon_Rounded_Square_Color.svg",
+        "link": "https://twitter.com/morrilet",
+        "alt": "Twitter",
+        "is_generic": true
+    },
+    {
+        "white_icon": "/icons/GitHub-Mark-Light.svg",
+        "accent_icon": "/icons/GitHub-Mark-AccentColor.svg",
+        "icon": "/icons/GitHub-Mark.svg",
+        "link": "https://github.com/morrilet",
+        "alt": "Github",
+        "is_generic": true
+    },
+    {
+        "white_icon": "/icons/fa-envelope-square.svg",
+        "accent_icon": "/icons/fa-envelope-square-accentcolor.svg",
+        "icon": "/icons/fa-envelope-square-square.svg",
+        "link": "mailto:ethanmorrillploum@gmail.com",
+        "alt": "Email",
+        "is_generic": false
+    }
+]

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+        <title>Blog | {{ title }}</title>
+        <link rel="stylesheet" type="text/css" href="/styles/post.css"/>
+        <link rel="stylesheet" type="text/css" href="/styles/prism/themes/okaidia.css"/>
+        <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
+    </head>
+    <body>
+        {% include components/header %}
+        
+        {% include components/title-banner with { 
+            title: {{ title }},
+            image: {{ image }},
+            page: {{ page }},
+            image_position: {{ image_position }},
+            date_modified: {{ date_modified }}
+        } %}
+        
+        <div id='content' class='responsive-gutters responsive-line-height'>
+            {{ content }}
+        </div>
+    </body>
+    <script type="text/javascript" src="/js/progress-bar.js"></script>
+    <script type="module" src="/js/glightbox_controller.js"></script>
+    <script src="https://kit.fontawesome.com/61329f8a74.js" crossorigin="anonymous"></script>
+</html>

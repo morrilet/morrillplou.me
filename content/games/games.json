@@ -1,0 +1,6 @@
+{
+    "tags": ["games"],
+    "innerTags": [],
+    "layout":"templates/game-page.liquid",
+    "permalink":"portfolio/games/{% if slug %}{{slug}}{% else %}{{title | slug}}{% endif %}/"
+}

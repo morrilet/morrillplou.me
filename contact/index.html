@@ -1,0 +1,44 @@
+{% include templates/base-page %}
+
+<link rel="stylesheet" type="text/css" href="/styles/contact.css"/>
+
+{% block content %} 
+    <div class="responsive-gutters">
+        <div id="form-wrapper" class="nav-section">
+            <h1>Contact</h1>
+            <p>I'm always happy to chat! Feel free to reach out either through the contact form below or my various social media links.</p>
+
+            <form id="contact-form" name="contact" method="POST" action="/contact" data-netlify="true">
+                <label for="email">Email</label><br/>
+                <input id="email" name="email" type="email"/>
+
+                <br/>
+
+                <label for="subject">Subject</label><br/>
+                <input id="subject" name="subject" type="text" required/>
+
+                <br/>
+
+                <label for="message">Message</label><br/>
+                <textarea id="message" name="message" rows="12"></textarea>
+
+                <br/>
+
+                <div id='submit-container'>
+                    <input type="submit" class="inverted" value="Submit"/>
+                </div>
+            </form>
+        </div>
+
+        <div id="form-help-wrapper" class="nav-section">
+            {% include components/generic-social-links %}
+            <p id='form-help'>
+                <i>Form not working? Email me directly at <a href="mailto:ethanmorrillploum@gmail.com">ethanmorrillploum@gmail.com</a></i>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="/js/contact-form.js"></script>
+{% endblock %}

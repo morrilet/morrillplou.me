@@ -1,0 +1,9 @@
+@use 'nav-entry';
+
+.nav-section {
+    .nav-section-more {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 1rem;
+    }
+}

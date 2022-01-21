@@ -1,0 +1,59 @@
+@use 'global';
+@use 'portfolio-page';
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    height: 48px;
+
+    .download-link-container {
+        display: block;
+        position: relative;
+        top: 0;
+        bottom: 0;
+
+        a {
+            height: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 8px 0;
+            text-align: center;
+
+            img {
+                display: block;
+                max-width: 8rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+#label {
+    height: 48px;
+    width: 100%;
+    margin: 0;
+    
+    color: global.$dark-color;
+    background-color: global.$light-color;
+    text-align: center;
+    font-weight: bold;
+    line-height: 48px;
+    border-radius: 16px;
+
+    transition: .1s ease-out;
+
+    &:hover {
+        color: global.$light-color;
+        background-color: transparent;
+    }
+
+    @include global.for-desktop-up {
+        padding: 0;
+    }
+}
