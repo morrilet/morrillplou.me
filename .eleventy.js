@@ -34,7 +34,6 @@ const getExcerpt = (post) => {
 }
 
 module.exports = (function(eleventyConfig) {
-
     // Config
     eleventyConfig.addPassthroughCopy('_includes/styles');
     eleventyConfig.addPassthroughCopy('_includes/images');
@@ -69,7 +68,6 @@ module.exports = (function(eleventyConfig) {
         return str.length;
     })
     eleventyConfig.addFilter('toUTCString', (str) => {
-        console.log(str);
         var date = new Date(str);
 
         var day = date.getUTCDate();

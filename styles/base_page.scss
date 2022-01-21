@@ -7,7 +7,10 @@ html, body {
     margin: 0;
 
     min-width: global.$minimum-width;
-    scroll-behavior: smooth;
+
+    @include global.for-desktop-up {
+        scroll-behavior: smooth;
+    }
 }
 
 body {

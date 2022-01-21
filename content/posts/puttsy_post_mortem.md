@@ -1,6 +1,7 @@
 ---
 title: "Puttsy - A Post-Mortem"
 image: "/images/posts/puttsy_post_mortem/puttsy_banner.png"
+thumbnail: '/images/games/puttsy/puttsy_thumbnail.png'
 date: 2018-04-28
 excerpt: "In this post I’ll explain the timeline for Puttsy as well as some reflections on my performance during this Ludum Dare. Let’s dive in!"
 
