@@ -40,6 +40,7 @@ image: '/images/post_it_notes.jpg'
 * ~~Fix long blog title overflow on mobile devices~~
 * ~~Alt text for HD:DDay images~~
 * ~~Footer space~~
+* Add 404 page.
 
 # Things to learn
 
