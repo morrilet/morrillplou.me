@@ -126,14 +126,14 @@ There’s one last thing we need to do, though, and it’s possibly the second m
 With the stream set up, we now need to view the it on the receiving computer. This can theoretically be done in a number of ways, but I used FFPLAY. Head on over to the receiving computer and run this command:
 
 ``` bash
-ffplay -f mpgets udp://192.168.2.62:8090
+ffplay -f mpegts udp://192.168.2.62:8090
 ```
 
 Okay, so looking back on it I’m not sure why that’s 192.168.2.62 instead of 127.0.0.1 (localhost), but that’s the command that worked for me. Regardless, the IP and port number will be different for you depending on your network setup. This is pretty straightforward, but let’s quickly run through this command.
 
 **ffplay** – The command to use. This should be pretty obvious. If it’s not working for you, you may need to [download FFMPEG](https://www.ffmpeg.org/download.html) on your receiving machine.
 
-**-f mpgets** – The format we’re expecting to receive. Recall that this is the format we specified for the UDP output stream in the commands we ran on the Raspberry Pi.
+**-f mpegts** – The format we’re expecting to receive. Recall that this is the format we specified for the UDP output stream in the commands we ran on the Raspberry Pi.
 
 **udp://192.168.2.62:8090** – Again, I can’t for the life of me recall why I used this IP address, but just know that this should point to wherever you sent the UDP output stream from the FFMPEG command. The port should be the same one you used to send the stream.
 
@@ -150,7 +150,7 @@ If you have any comments or concerns feel free to post them down below. I’d lo
 
 **P.S.** After I’d finished this whole adventure, I learned something interesting about saving to an .mp4 file. Apparently, the header data for an MP4 is saved to the end of the file. This means that if your stream is interrupted unexpectedly you may not write this data and you won’t be able to view the file’s contents, despite them still technically being there. A fix for this is to use MKV files for your saved stream data. These apparently write their headers throughout the file so if the stream cuts out unexpectedly you can still salvage the recorded file.
 
-**P.P.S. (12/28/2021)** A reader reached out asking about whether or not there’s any way to improve the latency here, and I’m happy to report that I’ve found a way to bring it down to ~1s. I’ll leave the explanation to this StackOverflow post (it’s pretty in-depth) but here’s the updated command for the receiving PC:
+**P.P.S. (12/28/2021)** A reader reached out asking about whether or not there’s any way to improve the latency here, and I’m happy to report that I’ve found a way to bring it down to ~1s. I’ll leave the explanation to [this StackOverflow post](https://stackoverflow.com/questions/16658873/how-to-minimize-the-delay-in-a-live-streaming-with-ffmpeg/49273163#49273163) (it’s pretty in-depth) but here’s the updated command for the receiving PC:
 
 ```bash
 ffplay -fflags nobuffer -flags low_delay -framedrop udp://192.168.2.62:8090
