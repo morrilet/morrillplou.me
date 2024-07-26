@@ -1,0 +1,135 @@
+@use "sass:math";
+
+.svg-cloud {
+    width: var(--size-x);
+    height: var(--size-y);
+    
+    position: absolute;
+    // left: -$sizeX;
+    // top: -$sizeY;
+}
+
+// .svg-cloud-child {
+//     animation: 1s alternate infinite 0s svg-cloud;
+// }
+
+.svg-cloud-back {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50% 50% 5% 5%;
+    background-color: #fff;
+    // box-shadow: 
+    //     inset 0 0 4rem 0px #fff,
+    //     0 0 4rem 0px #fff;
+    // box-shadow: #{$sizeX * 2} #{$sizeY * 2} 4rem 0px #fff;
+    box-shadow: 0 0 4rem 0px #fff;
+    filter: url(#cloud-filter-back);
+}
+
+.svg-cloud-mid {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+
+    border-radius: 50% 50% 5% 5%;
+    background-color: #ccc;
+    box-shadow: 0 0 4rem 0px #ccc;
+    filter: url(#cloud-filter-mid);
+}
+
+.svg-cloud-front {
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+
+    border-radius: 50% 50% 5% 5%;
+    background-color: #888;
+    box-shadow: 0 0 4rem 0px #888;
+    filter: url(#cloud-filter-front);
+}
+
+#main-cloud {
+    bottom: calc(var(--size-y) * -0.5);
+    left: 0;
+}
+
+#floater-1 {
+    animation: 25s infinite 0s normal svg-cloud;
+}
+
+@keyframes svg-cloud {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+.cloud-container {
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: end;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.cloud {    
+    animation-name: clouds;
+    -webkit-animation-name: clouds;
+    -moz-animation-name: clouds;
+    -o-animation-name: clouds;
+    animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -o-animation-duration: 10s;
+    animation-delay: calc(var(--index) * -2s);
+    -webkit-animation-delay: calc(var(--index) * -2s);
+    -moz-animation-delay: calc(var(--index) * -2s);
+    -o-animation-delay: calc(var(--index) * -2s);
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    transform-origin: center;
+}
+
+@keyframes clouds {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+    
+    25% {
+        opacity: 1;
+    }
+    
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}

@@ -11,7 +11,86 @@ about: {
 {% include templates/base-page %}
 
 {% block content %}
+
     <div id="title-wrapper">
+        <svg width="0" height="0" style="position: absolute;"> 
+            <filter id="cloud-filter-back">
+                <feTurbulence type="fractalNoise" result="base" baseFrequency=".012" numOctaves="4" />
+                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
+                    <animate attributeName="values" values="0;360" dur="20s" repeatCount="indefinite"/>
+                </feColorMatrix>
+                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
+                    values="1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 0"
+                />
+                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
+                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="120" />
+            </filter>
+            <filter id="cloud-filter-mid">
+                <feTurbulence type="fractalNoise" result="base" baseFrequency=".008" numOctaves="2" />
+                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
+                    <animate attributeName="values" values="0;360" dur="17.5s" repeatCount="indefinite"/>
+                </feColorMatrix>
+                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
+                    values="1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 0"
+                />
+                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
+                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="100" />
+            </filter>
+            <filter id="cloud-filter-front">
+                <feTurbulence type="fractalNoise" result="base" baseFrequency=".006" numOctaves="2" />
+                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
+                    <animate attributeName="values" values="0;360" dur="15s" repeatCount="indefinite"/>
+                </feColorMatrix>
+                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
+                    values="1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 -1
+                            1 0 0 0 0"
+                />
+                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
+                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="80" />
+            </filter>
+        </svg>
+
+        <div class="cloud-container">
+            <div id="main-cloud" class="svg-cloud" style="--size-x: 100%; --size-y: 18rem">
+                <div class="svg-cloud-child svg-cloud-back"></div>
+                <!-- <div class="svg-cloud-child svg-cloud-mid"></div>
+                <div class="svg-cloud-child svg-cloud-front"></div> -->
+            </div>
+
+            <div id="floater-1" class="svg-cloud" style="--size-x: 10rem; --size-y: 4rem">
+                <div class="svg-cloud-child svg-cloud-back"></div>
+                <div class="svg-cloud-child svg-cloud-mid"></div>
+                <div class="svg-cloud-child svg-cloud-front"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="title-wrapper">
+        <div class="cloud-container">
+            <img class="cloud" src="images/clouds/03.png" style="--index: 0"/>
+            <img class="cloud" src="images/clouds/07.png" style="--index: 1"/>
+            <img class="cloud" src="images/clouds/25.png" style="--index: 2"/>
+            <img class="cloud" src="images/clouds/34.png" style="--index: 3"/>
+            <img class="cloud" src="images/clouds/57.png" style="--index: 4"/>
+            <img class="cloud" src="images/clouds/98.png" style="--index: 5"/>
+            <img class="cloud" src="images/clouds/03.png" style="--index: 6"/>
+            <img class="cloud" src="images/clouds/07.png" style="--index: 7"/>
+            <img class="cloud" src="images/clouds/25.png" style="--index: 8"/>
+            <img class="cloud" src="images/clouds/34.png" style="--index: 9"/>
+            <img class="cloud" src="images/clouds/57.png" style="--index: 10"/>
+            <img class="cloud" src="images/clouds/98.png" style="--index: 11"/>
+        </div>
+    </div> -->
+
+    <!-- <div id="title-wrapper">
         <div id="title-header">
             <div id="title-header-text">
                 <div id="title-text-wrapper">
@@ -29,7 +108,7 @@ about: {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id='content' class="responsive-gutters">
         <!-- About Me -->
@@ -47,15 +126,6 @@ about: {
             more: blog_nav_section.more
         } %}
 
-        <!-- Game Previews -->
-        {% assign latest_games = collections.games | reverse | slice: 0, 3 %}
-        {% include components/nav-section with {
-            title: games_nav_section.title
-            description: games_nav_section.description
-            content: latest_games
-            more: games_nav_section.more
-        } %}
-        
         <!-- Site Previews -->
         {% assign latest_sites = collections.sites | reverse | slice: 0, 3 %}
         {% include components/nav-section with {
@@ -63,7 +133,16 @@ about: {
             description: sites_nav_section.description
             content: latest_sites
             more: sites_nav_section.more
-        } %}     
+        } %}  
+
+        <!-- Game Previews -->
+        {% assign latest_games = collections.games | reverse | slice: 0, 3 %}
+        {% include components/nav-section with {
+            title: games_nav_section.title
+            description: games_nav_section.description
+            content: latest_games
+            more: games_nav_section.more
+        } %}   
     </div>
 {% endblock %}
 
