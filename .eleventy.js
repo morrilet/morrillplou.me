@@ -23,7 +23,6 @@ const months = [
  * @param {object} post 
  */
 const getExcerpt = (post) => {
-    console.log(post);
     if (!post)
         return null
 
