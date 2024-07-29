@@ -40,7 +40,7 @@ some common tasks:
     * Add `<!-- more -->` to the body of the post where you want the excerpt to stop. Beware that this also captures formatting.
 * Images
     * Use the format `![alt-text](/images/my/image)` to inject a single image.
-    * Add this tag to your page for a gallery: `{% include components/image-slider with { images: [{ src: "img/url", alt: "alt text"},] } %}`.
+    * Add this tag to your page for a gallery: `{% render 'snippets/image-slider', images: [{ src: "img/url", alt: "alt text"},] %}`.
     As a bonus, put your image list in the front-matter!
 * Code Snippets
     * Nest your sample code between ```` ``` js (or any other extension) ```` and ```` ``` ```` tags to create a multi-line, formatted snippet.

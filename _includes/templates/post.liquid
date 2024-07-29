@@ -10,15 +10,15 @@
         <link rel="stylesheet" type="text/css" href="/bin/glightbox/css/glightbox.min.css"/>
     </head>
     <body>
-        {% include components/header %}
+        {% render 'snippets/header' %}
         
-        {% include components/title-banner with { 
+        {% render 'snippets/title-banner', 
             title: {{ title }},
             image: {{ image }},
             page: {{ page }},
             image_position: {{ image_position }},
             date_modified: {{ date_modified }}
-        } %}
+        %}
         
         <div id='content' class='responsive-gutters responsive-line-height'>
             {{ content }}

@@ -1,11 +1,11 @@
-{% include templates/base-page %}
+{% render 'templates/base-page' %}
 
 {% block content %}
     <div class="responsive-gutters">
         <div class="nav-section">
             <h1><a name='games' class='anchor-only'>Games</a></h1>
-            {%- for game in collections.games %}
-                {% include components/nav-entry with { item: game } %}
+            {%- for game in collections.games reversed %}
+                {% render 'snippets/nav-entry', item: game %}
             {%- endfor %}
         </div>
 
@@ -16,8 +16,8 @@
                 I reached out to a writer buddy of mine and we cooked that site up in a weekend. Now you know!
             -->
             <h1><a name='sites' class='anchor-only'>Sites</a></h1>
-            {%- for site in collections.sites %}
-                {% include components/nav-entry with { item: site } %}
+            {%- for site in collections.sites reversed %}
+                {% render 'snippets/nav-entry', item: site %}
             {%- endfor %}
         </div>
     </div>

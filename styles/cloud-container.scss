@@ -26,7 +26,7 @@
     //     0 0 4rem 0px #fff;
     // box-shadow: #{$sizeX * 2} #{$sizeY * 2} 4rem 0px #fff;
     box-shadow: 0 0 4rem 0px #fff;
-    filter: url(#cloud-filter-back);
+    filter: url(#cloud-turbulence-1) url(#cloud-back);
 }
 
 .svg-cloud-mid {
@@ -40,7 +40,7 @@
     border-radius: 50% 50% 5% 5%;
     background-color: #ccc;
     box-shadow: 0 0 4rem 0px #ccc;
-    filter: url(#cloud-filter-mid);
+    filter: url(#cloud-mid);
 }
 
 .svg-cloud-front {
@@ -54,7 +54,7 @@
     border-radius: 50% 50% 5% 5%;
     background-color: #888;
     box-shadow: 0 0 4rem 0px #888;
-    filter: url(#cloud-filter-front);
+    filter: url(#cloud-front);
 }
 
 #main-cloud {
@@ -63,15 +63,27 @@
 }
 
 #floater-1 {
-    animation: 25s infinite 0s normal svg-cloud;
+    animation: 100s infinite linear 0s normal svg-cloud;
+    bottom: 60%;
+}
+
+#floater-2 {
+    bottom: 40%;
+    animation: 120s infinite linear -30s reverse svg-cloud;
+}
+
+#floater-3 {
+    bottom: 80%;
+    animation: 180s infinite linear -100s normal svg-cloud;
 }
 
 @keyframes svg-cloud {
     0% {
-        left: -100%;
+        left: -15%;
+        transform: translateX(-100%);
     }
     100% {
-        left: 200%;
+        left: 115%;
     }
 }
 

@@ -1,4 +1,4 @@
-{% include templates/base-page %}
+{% render 'templates/base-page' %}
 
 <link rel="stylesheet" type="text/css" href="/styles/contact.css"/>
 
@@ -31,7 +31,7 @@
         </div>
 
         <div id="form-help-wrapper" class="nav-section">
-            {% include components/generic-social-links %}
+            {% render 'snippets/generic-social-links' %}
             <p id='form-help'>
                 <i>Form not working? Email me directly at <a href="mailto:ethanmorrillploum@gmail.com">ethanmorrillploum@gmail.com</a></i>
             </p>

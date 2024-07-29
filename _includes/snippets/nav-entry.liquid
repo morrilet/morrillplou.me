@@ -1,9 +1,10 @@
 <li class="nav-entry">
     {% if item.data.thumbnail %}
-        {% include components/thumbnail with { image: item.data.thumbnail, url: item.url, position: item.data.thumbnail_position } %}
+        {% render 'snippets/thumbnail', image: item.data.thumbnail, url: item.url, position: item.data.thumbnail_position %}
     {% else %}
-        {% include components/thumbnail with { image: item.data.image, url: item.url, position: item.data.thumbnail_position } %}
+        {% render 'snippets/thumbnail', image: item.data.image, url: item.url, position: item.data.thumbnail_position %}
     {% endif %}
+
     <div class="nav-entry-data">
         <span class='nav-entry-title-bar'>
             <a class='nav-entry-title' href={{ item.url }}>{{ item.data.title }}</a>
@@ -13,6 +14,6 @@
                 {% endfor %}
             </ul>
         </span>
-        {% excerpt item %}
+        {% comment %} {% excerpt item %} {% endcomment %}
     </div>
 </li>

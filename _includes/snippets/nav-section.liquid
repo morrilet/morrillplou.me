@@ -3,7 +3,7 @@
     <p>{{ description }}</p>
     <nav>
         {%- for el in content %}
-            {% include components/nav-entry with { item: el } %}
+            {% render 'snippets/nav-entry', item: el %}
         {%- endfor %}
     </nav>
     {% if more %}

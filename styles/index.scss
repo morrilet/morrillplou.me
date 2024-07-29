@@ -20,7 +20,6 @@
                 position: relative;
 
                 .title-text, .title-subtext {
-                    
                     // If not on mobile, use partial width.
                     @include global.for-tablet-portrait-up {
                         width: 60%;

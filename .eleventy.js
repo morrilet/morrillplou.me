@@ -23,6 +23,10 @@ const months = [
  * @param {object} post 
  */
 const getExcerpt = (post) => {
+    console.log(post);
+    if (!post)
+        return null
+
     const md = new markdownIt({ html: true })
     if (post.data.excerpt) {
         return md.render(post.data.excerpt);
@@ -45,6 +49,11 @@ module.exports = (function(eleventyConfig) {
         excerpt: true,
         excerpt_separator: "<!-- more -->"
     })
+    
+    // Fix for slow dev server loading.
+    eleventyConfig.setBrowserSyncConfig({
+        online: false
+    });
 
     // Modify the default image handling in markdown to inject our own class attributes.
     let markdownModifyToken = require('markdown-it-modify-token')

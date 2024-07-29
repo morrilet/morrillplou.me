@@ -8,12 +8,12 @@ about: {
 }
 ---
 
-{% include templates/base-page %}
+{% render 'templates/base-page' %}
 
 {% block content %}
 
     <div id="title-wrapper">
-        <svg width="0" height="0" style="position: absolute;"> 
+        <svg width="0" height="0" style="position: absolute;">
             <filter id="cloud-filter-back">
                 <feTurbulence type="fractalNoise" result="base" baseFrequency=".012" numOctaves="4" />
                 <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
@@ -59,90 +59,66 @@ about: {
         </svg>
 
         <div class="cloud-container">
-            <div id="main-cloud" class="svg-cloud" style="--size-x: 100%; --size-y: 18rem">
-                <div class="svg-cloud-child svg-cloud-back"></div>
-                <!-- <div class="svg-cloud-child svg-cloud-mid"></div>
-                <div class="svg-cloud-child svg-cloud-front"></div> -->
-            </div>
 
             <div id="floater-1" class="svg-cloud" style="--size-x: 10rem; --size-y: 4rem">
                 <div class="svg-cloud-child svg-cloud-back"></div>
                 <div class="svg-cloud-child svg-cloud-mid"></div>
                 <div class="svg-cloud-child svg-cloud-front"></div>
             </div>
+
+            <div id="floater-2" class="svg-cloud" style="--size-x: 16rem; --size-y: 6rem">
+                <div class="svg-cloud-child svg-cloud-back"></div>
+                <div class="svg-cloud-child svg-cloud-mid"></div>
+                <div class="svg-cloud-child svg-cloud-front"></div>
+            </div>
+
+            <div id="floater-3" class="svg-cloud" style="--size-x: 20rem; --size-y: 8rem">
+                <div class="svg-cloud-child svg-cloud-back"></div>
+                <div class="svg-cloud-child svg-cloud-mid"></div>
+                <div class="svg-cloud-child svg-cloud-front"></div>
+            </div>
+
+            <div id="main-cloud" class="svg-cloud" style="--size-x: 100%; --size-y: 18rem">
+                <div class="svg-cloud-child svg-cloud-back"></div>
+                <!-- <div class="svg-cloud-child svg-cloud-mid"></div>
+                <div class="svg-cloud-child svg-cloud-front"></div> -->
+            </div>
         </div>
     </div>
 
-    <!-- <div id="title-wrapper">
-        <div class="cloud-container">
-            <img class="cloud" src="images/clouds/03.png" style="--index: 0"/>
-            <img class="cloud" src="images/clouds/07.png" style="--index: 1"/>
-            <img class="cloud" src="images/clouds/25.png" style="--index: 2"/>
-            <img class="cloud" src="images/clouds/34.png" style="--index: 3"/>
-            <img class="cloud" src="images/clouds/57.png" style="--index: 4"/>
-            <img class="cloud" src="images/clouds/98.png" style="--index: 5"/>
-            <img class="cloud" src="images/clouds/03.png" style="--index: 6"/>
-            <img class="cloud" src="images/clouds/07.png" style="--index: 7"/>
-            <img class="cloud" src="images/clouds/25.png" style="--index: 8"/>
-            <img class="cloud" src="images/clouds/34.png" style="--index: 9"/>
-            <img class="cloud" src="images/clouds/57.png" style="--index: 10"/>
-            <img class="cloud" src="images/clouds/98.png" style="--index: 11"/>
-        </div>
-    </div> -->
-
-    <!-- <div id="title-wrapper">
-        <div id="title-header">
-            <div id="title-header-text">
-                <div id="title-text-wrapper">
-                    <h1 class="title-text inverted">Ethan Morrill-Ploum</h1>
-                    <h1 class="title-subtext inverted">Software Developer</h1>
-                    <h1 class="title-subtext inverted">[
-                        {% for obj in social_links %}
-                            <div class="social-link-container">
-                                <a class="no-decoration" href="{{ obj.link }}" target="blank">
-                                    <img src="{{ obj.white_icon }}" alt="{{ obj.alt }}" />
-                                </a>
-                            </div>
-                        {% endfor %}
-                    ]</h1>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div id='content' class="responsive-gutters">
         <!-- About Me -->
-        {% include components/nav-section with {
-            title: about.title
+        {% render 'snippets/nav-section',
+            title: about.title,
             description: about.description
-        } %}
+        %}
 
         <!-- Blog Previews -->
         {% assign latest_posts = collections.posts | reverse | slice: 0, 3 %}
-        {% include components/nav-section with {
+        {% render 'snippets/nav-section',
             title: blog_nav_section.title
             description: blog_nav_section.description
             content: latest_posts
             more: blog_nav_section.more
-        } %}
+        %}
 
         <!-- Site Previews -->
         {% assign latest_sites = collections.sites | reverse | slice: 0, 3 %}
-        {% include components/nav-section with {
+        {% render 'snippets/nav-section',
             title: sites_nav_section.title
             description: sites_nav_section.description
             content: latest_sites
             more: sites_nav_section.more
-        } %}  
+        %}  
 
         <!-- Game Previews -->
         {% assign latest_games = collections.games | reverse | slice: 0, 3 %}
-        {% include components/nav-section with {
+        {% render 'snippets/nav-section',
             title: games_nav_section.title
             description: games_nav_section.description
             content: latest_games
             more: games_nav_section.more
-        } %}   
+        %}   
     </div>
 {% endblock %}
 

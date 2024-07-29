@@ -97,7 +97,7 @@ Of all the games I’ve made for game jams, [MemErr](http://gamejolt.com/games/m
 
 Well before Asylum Jam 2016 started, I knew I had to prepare to make something in the horror genre. I’d never much enjoyed horror anything, so I started watching horror movies with a list of classics in hand. I found a few films that I liked and incorporated them into MemErr in some not so subtle ways (via the record player and the final clip). As my 48 hour window opened up, I found myself on an hour-long bus ride with a notebook, so I paid special attention to the brainstorming and design aspect of the jam. I laid out floor plans for the room to escape as well as some ideas for spooky events and writings for the post-it notes. (In case you’re curious, I have scanned in all of the notes I wrote for the game and packed them in a [.zip file.](https://drive.google.com/uc?export=download&id=0B6-b30JV-rlYVzYzNXpMYVh5Vms))
 
-{% include components/image-slider with { images: sketch_images } %}
+{% render 'snippets/image-slider', images: sketch_images %}
 
 # Concept
 
@@ -123,7 +123,7 @@ I spent a surprisingly large chunk of my 48 hours away from the computer, which 
 
 There were a few notable decisions that were made during development that I’d like to point out here as well. The first is the omission of the ceiling. I had actually finished making the ceiling but decided to cut it on the second day. The reason behind this was twofold: It made the scene darker because it cut down on ambient light, and it made the scene feel more claustrophobic. Both of these things could’ve been seen as advantages in a horror game, given some work, but I felt that I didn’t have the time to spend on it. The open roof also exposed a beautiful starry sky, which, to me made the scene feel more isolated and thoughtful. The second big cut was audio. I don’t have any experience with sound aside from cutting audio clips and using BFXR, so I tend to rely on outside talent for that. Unfortunately, it wasn’t until the first night of my 48 hour window that I remembered I’d need to ask someone to help out. Of course, nobody was available on a weekend on such short notice and I was left to handle sound on my own. I found a couple free, creepy sound clips that I could use and cut my own audio for the record player. Aside from that, this project only needed some ambient noises so it wasn’t too much of a blow to omit those. The other notable cuts that I made were the second floor of the house (though I still left the stairs in the scene because I felt that they filled the space well), and events such as periphery shadows, flickering lights, writing on the walls, and the TV turning on and off sporadically. These cuts were almost entirely due to time constrictions.
 
-{% include components/image-slider with { images: ceiling_images } %}
+{% render 'snippets/image-slider', images: ceiling_images %}
 
 # Results
 
