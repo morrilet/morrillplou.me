@@ -1,96 +1,6 @@
-@use "sass:math";
-
-.svg-cloud {
-    width: var(--size-x);
-    height: var(--size-y);
-    
-    position: absolute;
-    // left: -$sizeX;
-    // top: -$sizeY;
-}
-
-// .svg-cloud-child {
-//     animation: 1s alternate infinite 0s svg-cloud;
-// }
-
-.svg-cloud-back {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    border-radius: 50% 50% 5% 5%;
-    background-color: #fff;
-    // box-shadow: 
-    //     inset 0 0 4rem 0px #fff,
-    //     0 0 4rem 0px #fff;
-    // box-shadow: #{$sizeX * 2} #{$sizeY * 2} 4rem 0px #fff;
-    box-shadow: 0 0 4rem 0px #fff;
-    filter: url(#cloud-turbulence-1) url(#cloud-back);
-}
-
-.svg-cloud-mid {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -100%);
-
-    border-radius: 50% 50% 5% 5%;
-    background-color: #ccc;
-    box-shadow: 0 0 4rem 0px #ccc;
-    filter: url(#cloud-mid);
-}
-
-.svg-cloud-front {
-    position: absolute;
-    width: 100%;
-    height: 5%;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -100%);
-
-    border-radius: 50% 50% 5% 5%;
-    background-color: #888;
-    box-shadow: 0 0 4rem 0px #888;
-    filter: url(#cloud-front);
-}
-
-#main-cloud {
-    bottom: calc(var(--size-y) * -0.5);
-    left: 0;
-}
-
-#floater-1 {
-    animation: 100s infinite linear 0s normal svg-cloud;
-    bottom: 60%;
-}
-
-#floater-2 {
-    bottom: 40%;
-    animation: 120s infinite linear -30s reverse svg-cloud;
-}
-
-#floater-3 {
-    bottom: 80%;
-    animation: 180s infinite linear -100s normal svg-cloud;
-}
-
-@keyframes svg-cloud {
-    0% {
-        left: -15%;
-        transform: translateX(-100%);
-    }
-    100% {
-        left: 115%;
-    }
-}
+@import "../node_modules/svg-clouds/src/default";
 
 .cloud-container {
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: end;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -102,46 +12,56 @@
     justify-content: center;
 }
 
-.cloud {    
-    animation-name: clouds;
-    -webkit-animation-name: clouds;
-    -moz-animation-name: clouds;
-    -o-animation-name: clouds;
-    animation-iteration-count: infinite; 
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-duration: 10s;
-    -moz-animation-duration: 10s;
-    -o-animation-duration: 10s;
-    animation-delay: calc(var(--index) * -2s);
-    -webkit-animation-delay: calc(var(--index) * -2s);
-    -moz-animation-delay: calc(var(--index) * -2s);
-    -o-animation-delay: calc(var(--index) * -2s);
-
+.custom-cloud {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    object-fit: contain;
-    transform-origin: center;
+    width: var(--size-x);
+    height: var(--size-y);
 }
 
-@keyframes clouds {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) scale(0);
-    }
-    
-    25% {
-        opacity: 1;
-    }
-    
-    75% {
-        opacity: 1;
-    }
+.animation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
 
+#main-cloud {
+    left: 0;
+    bottom: calc(var(--size-y) * -0.5);
+}
+
+#floater-1 {
+    // animation: 1s infinite linear 0s normal svg-cloud;
+    animation: calc(8 * 60s) infinite linear -300s normal svg-cloud;
+}
+
+#floater-1 svg-cloud {
+    bottom: 60%;
+}
+
+#floater-2 {
+    // animation: 1s infinite linear -30s reverse svg-cloud;
+    animation: calc(9 * 60s) infinite linear -30s reverse svg-cloud;
+}
+
+#floater-2 svg-cloud {
+    bottom: 40%;
+}
+
+#floater-3 {
+    // animation: 1s infinite linear -100s normal svg-cloud;
+    animation: calc(10 * 60s) infinite linear 100s normal svg-cloud;
+}
+
+#floater-3 svg-cloud {
+    bottom: 80%;
+}
+
+@keyframes svg-cloud {
+    0% {
+        transform: translateX(-100%);
+    }
     100% {
-        opacity: 0;
-        transform: translateX(-50%) scale(1);
+        transform: translateX(100%);
     }
 }

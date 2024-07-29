@@ -10,79 +10,43 @@ about: {
 
 {% render 'templates/base-page' %}
 
+{% block head %}
+
+<script type="text/javascript" src="/bin/svg-clouds/index.js"></script>
+
+{% endblock %}
+
 {% block content %}
 
     <div id="title-wrapper">
-        <svg width="0" height="0" style="position: absolute;">
-            <filter id="cloud-filter-back">
-                <feTurbulence type="fractalNoise" result="base" baseFrequency=".012" numOctaves="4" />
-                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
-                    <animate attributeName="values" values="0;360" dur="20s" repeatCount="indefinite"/>
-                </feColorMatrix>
-                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
-                    values="1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 0"
-                />
-                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
-                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="120" />
-            </filter>
-            <filter id="cloud-filter-mid">
-                <feTurbulence type="fractalNoise" result="base" baseFrequency=".008" numOctaves="2" />
-                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
-                    <animate attributeName="values" values="0;360" dur="17.5s" repeatCount="indefinite"/>
-                </feColorMatrix>
-                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
-                    values="1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 0"
-                />
-                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
-                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="100" />
-            </filter>
-            <filter id="cloud-filter-front">
-                <feTurbulence type="fractalNoise" result="base" baseFrequency=".006" numOctaves="2" />
-                <feColorMatrix in="base" type="hueRotate" values="0" result="base-shifted">
-                    <animate attributeName="values" values="0;360" dur="15s" repeatCount="indefinite"/>
-                </feColorMatrix>
-                <feColorMatrix in="base-shifted" result="cloud-tex" type="matrix" 
-                    values="1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 -1
-                            1 0 0 0 0"
-                />
-                <feGaussianBlur in="SourceGraphic" result="blur-base" stdDeviation="15"/>
-                <feDisplacementMap in="blur-base" in2="cloud-tex" scale="80" />
-            </filter>
-        </svg>
-
         <div class="cloud-container">
-
-            <div id="floater-1" class="svg-cloud" style="--size-x: 10rem; --size-y: 4rem">
-                <div class="svg-cloud-child svg-cloud-back"></div>
-                <div class="svg-cloud-child svg-cloud-mid"></div>
-                <div class="svg-cloud-child svg-cloud-front"></div>
+            <div id="floater-1" class="animation-container">
+                <svg-cloud class="custom-cloud" style="--size-x: 10rem; --size-y: 4rem">
+                    <svg-cloud-part class="cloud-back" seed="0" aniamation-duration="180s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-mid" seed="0" aniamation-duration="180s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-front" seed="0" aniamation-duration="180s"></svg-cloud-part>
+                </svg-cloud>
             </div>
 
-            <div id="floater-2" class="svg-cloud" style="--size-x: 16rem; --size-y: 6rem">
-                <div class="svg-cloud-child svg-cloud-back"></div>
-                <div class="svg-cloud-child svg-cloud-mid"></div>
-                <div class="svg-cloud-child svg-cloud-front"></div>
+            <div id="floater-2" class="animation-container">
+                <svg-cloud class="custom-cloud" style="--size-x: 16rem; --size-y: 6rem">
+                    <svg-cloud-part class="cloud-back" seed="10" aniamation-duration="210s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-mid" seed="10" aniamation-duration="210s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-front" seed="10" aniamation-duration="210s"></svg-cloud-part>
+                </svg-cloud>
             </div>
 
-            <div id="floater-3" class="svg-cloud" style="--size-x: 20rem; --size-y: 8rem">
-                <div class="svg-cloud-child svg-cloud-back"></div>
-                <div class="svg-cloud-child svg-cloud-mid"></div>
-                <div class="svg-cloud-child svg-cloud-front"></div>
+            <div id="floater-3" class="animation-container">
+                <svg-cloud class="custom-cloud" style="--size-x: 20rem; --size-y: 8rem">
+                    <svg-cloud-part class="cloud-back" seed="20" aniamation-duration="240s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-mid" seed="20" aniamation-duration="240s"></svg-cloud-part>
+                    <svg-cloud-part class="cloud-front" seed="20" aniamation-duration="240s"></svg-cloud-part>
+                </svg-cloud>
             </div>
 
-            <div id="main-cloud" class="svg-cloud" style="--size-x: 100%; --size-y: 18rem">
-                <div class="svg-cloud-child svg-cloud-back"></div>
-                <!-- <div class="svg-cloud-child svg-cloud-mid"></div>
-                <div class="svg-cloud-child svg-cloud-front"></div> -->
-            </div>
+            <svg-cloud id="main-cloud" class="custom-cloud" style="--size-x: 100%; --size-y: 18rem">
+                <svg-cloud-part class="cloud-back" seed="30"></svg-cloud-part>
+            </svg-cloud>
         </div>
     </div>
 

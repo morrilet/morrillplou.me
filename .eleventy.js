@@ -41,6 +41,7 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('_includes/styles');
     eleventyConfig.addPassthroughCopy('_includes/images');
     eleventyConfig.addPassthroughCopy({'node_modules/glightbox/dist': 'bin/glightbox/'});
+    eleventyConfig.addPassthroughCopy({'node_modules/svg-clouds/src': 'bin/svg-clouds/'});
     eleventyConfig.addPassthroughCopy('icons');
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addShortcode('excerpt', (post) => getExcerpt(post))
