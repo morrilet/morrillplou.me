@@ -1,4 +1,3 @@
-// window.onload = function() { handleScroll() }
 window.onscroll = function() { handleScroll() }
 
 /**

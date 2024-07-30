@@ -10,13 +10,6 @@
 }
 
 #mask-path-inner {
-    animation: 5s infinite linear 0s normal animate-line;
-}
-
-@keyframes animate-line {
-    0% {
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
+    // Hide this in the stylesheet and we'll bring it back once the animation library is loaded up.
+    display: none;
 }
