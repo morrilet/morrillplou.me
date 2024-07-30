@@ -44,6 +44,7 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({'node_modules/svg-clouds/src': 'bin/svg-clouds/'});
     eleventyConfig.addPassthroughCopy('icons');
     eleventyConfig.addPassthroughCopy('images');
+    eleventyConfig.addPassthroughCopy('js');
     eleventyConfig.addShortcode('excerpt', (post) => getExcerpt(post))
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,

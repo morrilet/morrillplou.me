@@ -11,14 +11,39 @@ about: {
 {% render 'templates/base-page' %}
 
 {% block head %}
-
-<script type="text/javascript" src="/bin/svg-clouds/index.js"></script>
-
+<!-- TODO: Figure out why this has to be here and won't work in the JS block. -->
+<!-- TODO: Figure out why we're getting errors accessing the parent element on first load. Check console. -->
+<script src="/bin/svg-clouds/index.js"></script>
 {% endblock %}
 
 {% block content %}
-
     <div id="title-wrapper">
+        <div id="plane-stroke">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" viewBox="0 0 800 400">
+                <path d="M225.82878663299311 -21.350592057431527C347.2039849972509 -9.691398382708222 663.4969806885504 -49.15327811293283 589.9543817257666 13.626988966738395C516.4117827629827 76.40725604640963 -65.35207015119165 89.56121341335296 5.200989744641674 166.99020918158214C75.754049640475 244.4192049498113 662.8990620191677 189.71068851100924 801.6135614132666 245.91397627142587C940.3280608073654 302.1172640318425 548.1008457557144 305.70470706569665 421.3444879269384 335.60007246283203 " fill="none" stroke-width="11" stroke="hsl(205, 69%, 50%)" stroke-linecap="round" transform="matrix(1.212467484375,0,0,1.212467484375,-95.20923281161072,-37.898227810984224)" stroke-dasharray="16 16" stroke-opacity="1"/>
+                <defs>
+                    <linearGradient id="SvgjsLinearGradient1000">
+                        <stop stop-color="hsl(205, 69%, 60%)" offset="0"/>
+                        <stop stop-color="hsl(205, 69%, 80%)" offset="1"/>
+                    </linearGradient>
+                </defs>
+            </svg> -->
+            <!-- TODO: This is a bit iffy for responsive design. I can't seem to center it properly, so maybe just use a media query to swap the path to something nicer that cuts across in one direction. -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" viewBox="0 0 800 400">
+                <mask id="mask-path">
+                    <path id="mask-path-inner" mask="url(#mask-path)" d="M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469" fill="none" stroke-width="9" stroke="hsl(255, 100%, 100%)" stroke-linecap="round" stroke-dasharray="24 14"/>
+                </mask>
+                <path id="main-path" mask="url(#mask-path)" d="M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469" fill="none" stroke-width="9" stroke="hsl(205, 69%, 50%)" stroke-linecap="round" stroke-dasharray="24 14"/>
+                    
+                <defs>
+                    <linearGradient id="SvgjsLinearGradient1000">
+                        <stop stop-color="hsl(37, 99%, 67%)" offset="0"/>
+                        <stop stop-color="hsl(316, 73%, 52%)" offset="1"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
         <div class="cloud-container">
             <div id="floater-1" class="animation-container">
                 <svg-cloud class="custom-cloud" style="--size-x: 10rem; --size-y: 4rem">
@@ -47,6 +72,12 @@ about: {
             <svg-cloud id="main-cloud" class="custom-cloud" style="--size-x: 100%; --size-y: 18rem">
                 <svg-cloud-part class="cloud-back" seed="30"></svg-cloud-part>
             </svg-cloud>
+        </div>
+
+        <div id="avatar-container">
+            <div id="avatar">
+                <img src="images/Headshot_Cropped-2.jpg" alt="A picture of Ethan">
+            </div>
         </div>
     </div>
 
@@ -82,11 +113,12 @@ about: {
             description: games_nav_section.description
             content: latest_games
             more: games_nav_section.more
-        %}   
+        %}
     </div>
 {% endblock %}
 
 {% block js %}
     <script src="/js/ie-check.js"></script>
     <script src="/js/easter-egg.js"></script>
+    <script src="/js/line-animations.js"></script>
 {% endblock %}
