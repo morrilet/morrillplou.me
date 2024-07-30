@@ -10,6 +10,21 @@
 }
 
 #mask-path-inner {
+    // TODO: progressive improvement - display it and hide it once JS is loaded.
     // Hide this in the stylesheet and we'll bring it back once the animation library is loaded up.
     display: none;
+}
+
+#paper-plane {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    top: 0;
+    bottom: 0;
+
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
 }

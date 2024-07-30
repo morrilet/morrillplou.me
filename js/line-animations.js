@@ -1,31 +1,111 @@
 import { gsap } from "/bin/gsap/index.js";
 import { ScrollTrigger } from "/bin/gsap/ScrollTrigger.js";
+import { MotionPathPlugin } from "/bin/gsap/MotionPathPlugin.js";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 
 window.addEventListener('load', () => {
     const maskLine = document.getElementById('mask-path-inner');
     const maskTotalLength = maskLine.getTotalLength();
-    
     maskLine.style.strokeDasharray = `${maskTotalLength} ${maskTotalLength}`;
 
-    gsap.fromTo(
-        '#mask-path-inner', 
-        {
-            strokeDashoffset: maskTotalLength,
-            display: "none",
-        }, 
-        {
-            scrollTrigger: {
-                trigger: '#mask-path-inner',
-                start: 'top top',
-                end: '+=20%',
-                scrub: 1,
+    gsap.timeline()
+        .add("start")
+        .fromTo(
+            '#mask-path-inner',
+            {
+                strokeDashoffset: maskTotalLength,
+                display: "none",
             },
-            strokeDashoffset: 0,
-            display: "block"
-        }
-    );
+            {
+                strokeDashoffset: maskTotalLength * 0.35,
+                display: "block",
+                ease: "expo.out",
+                duration: 0.8
+            },
+            "start"
+        )
+        .to(
+            "#paper-plane",
+            {
+                motionPath: {
+                    path: "#main-path",
+                    align: "#main-path",
+                    alignOrigin: [0.5, 0.5],
+                    autoRotate: true,
+                    end: 1 * (1 - 0.35)
+                },
+                duration: 0.8
+            },
+            "start"
+        )
+        .add("scroll-start")
+        .fromTo(
+            '#mask-path-inner',
+            {
+                strokeDashoffset: maskTotalLength * 0.35
+            },
+            {
+                scrollTrigger: {
+                    trigger: '#mask-path-inner',
+                    start: 'top top',
+                    end: '+=20%',
+                    scrub: 1,
+                    markers: true
+                },
+                strokeDashoffset: 0,
+            },
+            "scroll-start",
+        )
+        .fromTo(
+            "#paper-plane",
+            {
+                motionPath: {
+                    path: "#main-path",
+                    align: "#main-path",
+                    alignOrigin: [0.5, 0.5],
+                    autoRotate: true,
+                    start: 1 * (1 - 0.35)
+                }
+            },
+            {
+                scrollTrigger: {
+                    trigger: '#mask-path-inner',
+                    start: 'top top',
+                    end: '+=20%',
+                    scrub: 1,
+                    markers: true
+                },
+                motionPath: {
+                    path: "#main-path",
+                    align: "#main-path",
+                    alignOrigin: [0.5, 0.5],
+                    autoRotate: true,
+                    start: 1 * (1 - 0.35)
+                },
+                duration: 0.8
+            },
+            "scroll-start"
+        )
+
+    // gsap.fromTo(
+    //     '#mask-path-inner', 
+    //     {
+    //         strokeDashoffset: maskTotalLength,
+    //         display: "none",
+    //     }, 
+    //     {
+    //         scrollTrigger: {
+    //             trigger: '#mask-path-inner',
+    //             start: 'top top',
+    //             end: '+=20%',
+    //             scrub: 1,
+    //         },
+    //         strokeDashoffset: 0,
+    //         display: "block"
+    //     }
+    // );
 })
 
 // window.onscroll = function() { handleScroll() }
