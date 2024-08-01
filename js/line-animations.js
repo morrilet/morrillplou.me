@@ -10,6 +10,9 @@ window.addEventListener('load', () => {
     const maskTotalLength = maskLine.getTotalLength();
     maskLine.style.strokeDasharray = `${maskTotalLength} ${maskTotalLength}`;
 
+    const planeAlignOrigin = [0.5, 0.65];
+    const planeAngleOffset = 50;
+
     gsap.timeline()
         .add("start")
         .fromTo(
@@ -32,11 +35,12 @@ window.addEventListener('load', () => {
                 motionPath: {
                     path: "#main-path",
                     align: "#main-path",
-                    alignOrigin: [0.5, 0.5],
-                    autoRotate: true,
+                    alignOrigin: planeAlignOrigin,
+                    autoRotate: planeAngleOffset,
                     end: 1 * (1 - 0.35)
                 },
-                duration: 0.8
+                duration: 0.8,
+                ease: "expo.out",
             },
             "start"
         )
@@ -64,8 +68,8 @@ window.addEventListener('load', () => {
                 motionPath: {
                     path: "#main-path",
                     align: "#main-path",
-                    alignOrigin: [0.5, 0.5],
-                    autoRotate: true,
+                    alignOrigin: planeAlignOrigin,
+                    autoRotate: planeAngleOffset,
                     start: 1 * (1 - 0.35)
                 }
             },
@@ -80,8 +84,8 @@ window.addEventListener('load', () => {
                 motionPath: {
                     path: "#main-path",
                     align: "#main-path",
-                    alignOrigin: [0.5, 0.5],
-                    autoRotate: true,
+                    alignOrigin: planeAlignOrigin,
+                    autoRotate: planeAngleOffset,
                     start: 1 * (1 - 0.35)
                 },
                 duration: 0.8

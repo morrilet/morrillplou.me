@@ -8,7 +8,11 @@
     </nav>
     {% if more %}
         <span class="nav-section-more">
-            <a href={{ more }}>View All</a>
+            {% if contentLength %}
+                <a href={{ more }}>View All {{ contentLength }}</a>
+            {% else %}
+                <a href={{ more }}>View All</a>
+            {% endif %}
         </span>
     {% endif %}
 </div>
