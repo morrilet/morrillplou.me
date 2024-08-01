@@ -55,8 +55,7 @@ window.addEventListener('load', () => {
                     trigger: '#mask-path-inner',
                     start: 'top top',
                     end: '+=20%',
-                    scrub: 1,
-                    markers: true
+                    scrub: 1
                 },
                 strokeDashoffset: 0,
             },
@@ -78,8 +77,7 @@ window.addEventListener('load', () => {
                     trigger: '#mask-path-inner',
                     start: 'top top',
                     end: '+=20%',
-                    scrub: 1,
-                    markers: true
+                    scrub: 1
                 },
                 motionPath: {
                     path: "#main-path",

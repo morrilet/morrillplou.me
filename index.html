@@ -89,8 +89,8 @@ about: {
         </div>
     </div>
 
-    <div id='content' class="responsive-gutters">
-        <div id="nav-container">
+    <div id='content'>
+        <div id="card-container" class="content-section responsive-gutters">
             <!-- Blog Previews -->
             {% assign latest_posts = collections.posts | reverse | slice: 0, 3 %}
             {% render 'snippets/nav-section',
@@ -122,11 +122,13 @@ about: {
             %}
         </div>
         
-        <!-- About Me -->
-        {% render 'snippets/nav-section',
-            title: about.title,
-            description: about.description
-        %}
+        <div id="about-container" class="content-section responsive-gutters">
+            <!-- About Me -->
+            {% render 'snippets/nav-section',
+                title: about.title,
+                description: about.description
+            %}
+        </div>
     </div>
 {% endblock %}
 
@@ -134,4 +136,5 @@ about: {
     <script src="/js/ie-check.js"></script>
     <script src="/js/easter-egg.js"></script>
     <script type="module" src="/js/line-animations.js"></script>
+    <script type="module" src="/js/header-animations.js"></script>
 {% endblock %}
