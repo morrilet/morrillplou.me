@@ -3,37 +3,35 @@ import { ScrollTrigger } from "/bin/gsap/ScrollTrigger.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const animationSpeed = 0.6;
+const scrollTrigger = {
+    trigger: '#title-wrapper',
+    start: 'bottom top+=25%',
+    end: '+=1px',
+    scrub: animationSpeed,
+    markers: true,
+}
+
 window.addEventListener('load', () => {
     gsap.timeline()
-        .add("start")
         .fromTo(
             '#header',
             {
-                y: -100
+                yPercent: -100
             },
             {
-                scrollTrigger: {
-                    trigger: '#content',
-                    start: 'top 30%',
-                    end: '+=1',
-                    scrub: 1
-                },
-                y: 0
+                scrollTrigger,
+                yPercent: 0,
             },
         )
         .fromTo(
             '#header-block',
             {
-                y: -100
+                yPercent: -100
             },
             {
-                scrollTrigger: {
-                    trigger: '#content',
-                    start: 'top top',
-                    end: '+=5rem',
-                    scrub: 1
-                },
-                y: 0
+                scrollTrigger,
+                yPercent: 0,
             },
         )
 });
