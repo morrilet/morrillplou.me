@@ -4,9 +4,6 @@ import { ScrollTrigger } from "/bin/gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', () => {
-    const header = document.getElementById("header");
-    const headerBlock = document.getElementById("header-block");
-    
     gsap.timeline()
         .add("start")
         .fromTo(
@@ -17,8 +14,8 @@ window.addEventListener('load', () => {
             {
                 scrollTrigger: {
                     trigger: '#content',
-                    start: 'top top',
-                    end: '+=5rem',
+                    start: 'top 30%',
+                    end: '+=1',
                     scrub: 1
                 },
                 y: 0
