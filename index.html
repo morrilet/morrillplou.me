@@ -18,32 +18,37 @@ about: {
 
 {% block content %}
     <div id="title-wrapper">
-        <div id="plane-stroke">
+        <div id="plane-stroke-top">
             <!-- M2.242152452468872,2.6905829906463623C15.18385606408119,9.336323055028915,36.08071673750877,-21.291477979421607,68.60986328125,36.77130126953125C101.13900982499123,94.83408051848411,53.45738739013673,229.79371490478516,169.05828857421875,300.44842529296875C284.6591897583008,371.10313568115237,565.4215393066406,379.8654782104492,661.4349975585938,399.1031494140625 -->
             <!-- M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469 -->
+            <!-- M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469 -->
+            <!-- M395.0672607421875,156.05381774902344C286.84603627522785,184.75336710611978,5.231691996256515,161.4349822998047,70.4035873413086,242.1524658203125C135.57548268636066,322.8699493408203,417.18982696533203,346.18833414713544,590.5829467773438,398.2062683105469 -->
+            
             <!-- TODO: This is a bit iffy for responsive design. I can't seem to center it properly, so maybe just use a media query to swap the path to something nicer that cuts across in one direction. -->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" viewBox="0 0 800 400">
-                <mask id="mask-path">
-                <path 
-                    id="mask-path-inner" 
-                    d="M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469"
-                    fill="none" 
-                    stroke-width="9" 
-                    stroke="hsl(255, 100%, 100%)" 
-                    stroke-linecap="round" 
-                    stroke-dasharray="24 14"
-                />
+            <svg overflow="visible" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" viewBox="0 0 192.43179 111.58766">
+                <mask id="mask-path-top">
+                    <path 
+                        id="mask-path-top-inner"
+                        d="M118.233 61.558c-76.5 4.953-134.137 26.181-96.935 45.994s107.415 12.737 134.661 24.766c27.247 12.03 45.586 40.334 45.586 40.334"
+                        fill="none"
+                        stroke-width=".65rem" 
+                        stroke="hsl(255, 100%, 100%)" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="2rem 1rem"
+                    />
                 </mask>
-
+                
                 <path 
-                    id="main-path" 
-                    mask="url(#mask-path)" 
-                    d="M583.4080810546875,0C423.7668228149414,41.85351308186849,72.79521942138672,-7.174883524576813,104.48430633544922,125.56053924560547C136.17339324951172,258.2959620157877,487.1449966430664,307.3243586222331,678.475341796875,398.2062683105469"
+                    id="main-path-top" 
+                    class="visible-path"
+                    mask="url(#mask-path-top)" 
+                    d="M118.233 61.558c-76.5 4.953-134.137 26.181-96.935 45.994s107.415 12.737 134.661 24.766c27.247 12.03 45.586 40.334 45.586 40.334"
+                    transform="translate(-9.382 -61.238)"
                     fill="none" 
-                    stroke-width="9" 
-                    stroke="hsl(205, 69%, 50%)" 
+                    stroke-width=".65rem"
                     stroke-linecap="round" 
-                    stroke-dasharray="24 14"
+                    stroke-dasharray="2rem 1rem"
+                    vector-effect="non-scaling-stroke"
                 />
             </svg>
 
@@ -52,6 +57,7 @@ about: {
             </div>
         </div>
 
+        <!-- TODO: Rework. This is performance intensive. -->
         <div class="cloud-container">
             <div id="floater-1" class="animation-container">
                 <svg-cloud class="custom-cloud" style="--size-x: 10rem; --size-y: 4rem">
@@ -90,7 +96,29 @@ about: {
     </div>
 
     <div id='content'>
-        <div id="card-container" class="content-section responsive-gutters">
+        <div id="title-section" class="content-section responsive-gutters">
+            <h1>Hey there! I'm Ethan.</h1>
+            <h3>It's good to meet you!</h3>
+            <p>
+                I'm a full stack software engineer with a soft spot for the backend. 
+                I got my start as a freelance game developer, which gave me the opportunity 
+                to get hands-on with just about every facet of interactive media. I've worked 
+                on multiplayer networking, animations, visual effects, and gameplay programming, 
+                to name a few. My time as a freelancer granted me a strong client focus and 
+                entrepreneurial spirit that I've nurtured ever since.
+            </p>
+            <p>
+                More recently I've been building SaaS and eCommerce web applications in the 
+                finance and entertainment industries, plus building side-projects and running 
+                a microscopic game studio nearing the release of it's first commercial title, 
+                Dice to Meet You.
+            </p>
+            <p>
+                I'm currently looking for new opportunities, so if you've got something cool you're working on let's chat!
+            </p>
+        </div>
+
+        <div id="card-container" class="content-section">
             <!-- Blog Previews -->
             {% assign latest_posts = collections.posts | reverse | slice: 0, 3 %}
             {% render 'snippets/nav-section',
@@ -109,7 +137,7 @@ about: {
                 content: latest_sites
                 contentLength: collections.sites.length
                 more: sites_nav_section.more
-            %}  
+            %}
 
             <!-- Game Previews -->
             {% assign latest_games = collections.games | reverse | slice: 0, 3 %}
@@ -122,6 +150,36 @@ about: {
             %}
         </div>
         
+        <div id="plane-stroke-mid">
+            <svg overflow="visible" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" viewBox="0 0 205.24 36.03">
+                <mask id="mask-path-mid">
+                    <path 
+                        id="mask-path-mid-inner"
+                        d="M205.964 160.445c-40.74 8.55-51.051 12.574-85.001 11.569-33.95-1.006-36.968-30.933-22.634-29.424 14.335 1.51 39.232 30.178 3.773 31.938-35.46 1.76-24.897-11.82-46.525-4.526C33.95 177.295.754 178.3.754 178.3"                         
+                        fill="none" 
+                        stroke="hsl(255, 100%, 100%)" 
+                        stroke-width="0.65rem" 
+                        stroke-linecap="round" 
+                        stroke-dasharray="2rem 1rem"
+                        vector-effect="non-scaling-stroke"
+                    />
+                </mask>
+                
+                <path 
+                    id="main-path-mid" 
+                    class="visible-path"
+                    mask="url(#mask-path-mid)" 
+                    d="M205.964 160.445c-40.74 8.55-51.051 12.574-85.001 11.569-33.95-1.006-36.968-30.933-22.634-29.424 14.335 1.51 39.232 30.178 3.773 31.938-35.46 1.76-24.897-11.82-46.525-4.526C33.95 177.295.754 178.3.754 178.3"
+                    transform="translate(-.75 -142.403)"
+                    fill="none" 
+                    stroke-width=".65rem"
+                    stroke-linecap="round" 
+                    stroke-dasharray="2rem 1rem"
+                    vector-effect="non-scaling-stroke"
+                />
+            </svg>
+        </div>
+
         <div id="about-container" class="content-section responsive-gutters">
             <!-- About Me -->
             {% render 'snippets/nav-section',

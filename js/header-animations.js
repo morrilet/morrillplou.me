@@ -9,7 +9,6 @@ const scrollTrigger = {
     start: 'bottom top+=25%',
     end: '+=1px',
     scrub: animationSpeed,
-    markers: true,
 }
 
 window.addEventListener('load', () => {

@@ -19,4 +19,18 @@ window.addEventListener('load', () => {
                 yPercent: -25
             },
         )
+        .fromTo(
+            '#plane-stroke-top',
+            {
+                yPercent: 0
+            },
+            {
+                scrollTrigger: {
+                    trigger: '#title-wrapper',
+                    start: 'top top',
+                    scrub: .1
+                },
+                yPercent: -12.5
+            }
+        )
 });

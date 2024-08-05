@@ -1,18 +1,33 @@
-#plane-stroke {
+@use 'global';
+
+.visible-path {
+    stroke: global.$blue;
+}
+
+#plane-stroke-top {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 75%;
+    top: 40%;
+    left: 10%;
 
     svg {
         position: relative;
         height: 100%;
+        width: 100%;
     }
 }
 
-#mask-path-inner {
-    // TODO: progressive improvement - display it and hide it once JS is loaded.
-    // Hide this in the stylesheet and we'll bring it back once the animation library is loaded up.
-    display: none;
+#plane-stroke-mid {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2.5rem;
+
+    svg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 #paper-plane {
